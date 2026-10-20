@@ -11,8 +11,8 @@ complete its reconstruction is, against a ground-truth scan.
   model that returns depth and cameras. The alignment takes the position of the object from an *independent anchor* (the ground-truth
   pose) and searches only the depth scale (the **reference mode**), instead of fitting all seven parameters of a similarity transform to
   the cloud (the **free fit**), which absorbs part of the error it is supposed to measure.
-* **A light segmentation head** on the frozen backbone of Depth Anything 3 (32.65 M parameters, about 18 minutes of training on frames of
-  the capture), which replaces manual annotation of the masks. The trained heads are on
+* **A light segmentation head** (our method) on the frozen backbone of Depth Anything 3 (32.65 M parameters, about 18 minutes of training on
+  frames of the capture), which replaces manual annotation of the masks. The weights of the trained heads are on
   [Hugging Face](https://huggingface.co/abramov-de/objeval3d-heads).
 * **The result files** of every experiment, and the code that turns them into the tables and figures of the paper.
 
@@ -44,22 +44,6 @@ pytest                                                     # the tables against 
 ```
 
 `python -m objeval3d.analysis.tables --help` lists the tables.
-
-## Trained heads (Hugging Face)
-
-The trained heads are at [huggingface.co/abramov-de/objeval3d-heads](https://huggingface.co/abramov-de/objeval3d-heads): nine files of
-131 MB, each is the head only (32.65 M parameters) that is attached to DA3-LARGE. A head knows the objects and the scene setup of its
-training frames, so take the one that matches your data:
-
-| file | trained on | objects | held-out mean IoU |
-|---|---|---|---|
-| `lmo_seg_head.pt` | LM-O, scene 2, 732 frames | 8 | 0.817 |
-| `ycbv_b20_seg_head.pt` | YCB-V, scenes 48, 50, 53, 58, 684 frames | 13 | 0.942 |
-| `ycbv_cross_scene_seg_head.pt` | YCB-V, on other scenes than it is tested on, 1,695 frames | 14 | 0.287 on the unseen scenes |
-
-The folder `variants/` has six more heads for the side experiments: other train/test splits of the same data (`lmo_b20`, `lmo_b5`,
-`ycbv_b5`) and LM-O heads trained on 100, 250 and 500 frames (`lmo_seg_head_n100`, `_n250`, `_n500`).
-[docs/MODEL_CARD.md](docs/MODEL_CARD.md), the model card shown on Hugging Face, describes every file.
 
 ## Use the segmentation head on your images
 
