@@ -45,6 +45,22 @@ pytest                                                     # the tables against 
 
 `python -m objeval3d.analysis.tables --help` lists the tables.
 
+## Trained heads (Hugging Face)
+
+The trained heads are at [huggingface.co/abramov-de/objeval3d-heads](https://huggingface.co/abramov-de/objeval3d-heads): nine files of
+131 MB, each is the head only (32.65 M parameters) that is attached to DA3-LARGE. A head knows the objects and the scene setup of its
+training frames, so take the one that matches your data:
+
+| file | trained on | objects | held-out mean IoU |
+|---|---|---|---|
+| `lmo_seg_head.pt` | LM-O, scene 2, 732 frames | 8 | 0.817 |
+| `ycbv_b20_seg_head.pt` | YCB-V, scenes 48, 50, 53, 58, 684 frames | 13 | 0.942 |
+| `ycbv_cross_scene_seg_head.pt` | YCB-V, on other scenes than it is tested on, 1,695 frames | 14 | 0.287 on the unseen scenes |
+
+The folder `variants/` has six more heads for the side experiments: other train/test splits of the same data (`lmo_b20`, `lmo_b5`,
+`ycbv_b5`) and LM-O heads trained on 100, 250 and 500 frames (`lmo_seg_head_n100`, `_n250`, `_n500`).
+[docs/MODEL_CARD.md](docs/MODEL_CARD.md), the model card shown on Hugging Face, describes every file.
+
 ## Use the segmentation head on your images
 
 The head is a Depth Anything 3 `DPT` decoder that reads the same four feature maps as the depth head and outputs one logit per object. It
