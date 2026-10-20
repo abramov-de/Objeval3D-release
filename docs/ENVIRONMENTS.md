@@ -6,7 +6,7 @@ on disk: the masks are written once (`--mask-source dir`) and read by every reco
 
 | environment | for | Python | needs a GPU |
 |---|---|---|---|
-| **analysis** | the tables, the statements, the figures, the tests (level 1 of [REPRODUCING.md](REPRODUCING.md)) | 3.10 – 3.13 | no |
+| **analysis** | the tables, the figures, the tests (level 1 of [REPRODUCING.md](REPRODUCING.md)) | 3.10 – 3.13 | no |
 | **da3** | the head (training, scoring), DA3-LARGE, ZebraPose, stages 3–4, the cost of the head | 3.10 | yes |
 | **vggt** | VGGT-1B | 3.11 | yes |
 | **sam3** | SAM 3 | 3.12 | yes |
