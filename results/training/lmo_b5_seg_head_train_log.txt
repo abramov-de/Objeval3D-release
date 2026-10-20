@@ -1,0 +1,64 @@
+2026-08-27 11:50:28,192 ======================================================================
+2026-08-27 11:50:28,192 args: {'data_dir': 'workspace/objeval/seg_data/lmo_b5', 'base_model_dir': 'depth-anything/DA3-LARGE', 'seg_model_name': 'da3-large-seg', 'out_ckpt': 'workspace/objeval/ckpt/lmo_b5_seg_head.pt', 'out_loss_plot': '', 'log_file': '', 'epochs': 20, 'batch_size': 2, 'lr': 0.0001, 'weight_decay': 0.0001, 'grad_clip_norm': 1.0, 'image_size': 504, 'num_workers': 4, 'augment': True, 'amp': False, 'max_train': 0, 'seed': 42, 'device': 'cuda'}
+2026-08-27 11:50:28,194 9 classes: ['background', 'ape', 'can', 'cat', 'driller', 'duck', 'eggbox', 'glue', 'holepuncher']
+2026-08-27 11:50:28,200 processing resolution (matches DA3 inference): 378x504
+2026-08-27 11:50:32,273 mask labels checked on 972 files: all within [0,8] or 255
+2026-08-27 11:50:32,289 train=729  val=243
+2026-08-27 11:50:32,627 GPU 0 (NVIDIA GeForce RTX 5090): 30.4 GiB free of 31.4 GiB
+2026-08-27 11:50:32,892 HTTP Request: HEAD https://huggingface.co/depth-anything/DA3-LARGE/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-08-27 11:50:32,938 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/depth-anything/DA3-LARGE/c54c26b16ec04d218e8d584ecf4bce082a9fcc20/config.json "HTTP/1.1 200 OK"
+2026-08-27 11:50:35,747 HTTP Request: HEAD https://huggingface.co/depth-anything/DA3-LARGE/resolve/main/model.safetensors "HTTP/1.1 302 Found"
+2026-08-27 11:50:38,711 base weights loaded — missing=60 (the whole seg_head, random-initialised by design), unexpected=0
+2026-08-27 11:50:38,858 seg_head output conv: 32->1  =>  32->9
+2026-08-27 11:50:39,264 trainable 32,650,697 / total 443,592,464 (7.36%)
+2026-08-27 11:51:30,977 epoch 01/20 | train=0.6544 | val=0.4112 | val_mIoU=0.6199 (8/8 classes in val) | val_mIoU_all=0.6199 | lr=1.00e-04
+2026-08-27 11:51:30,978     per-class IoU: background=0.967  ape=0.578  can=0.498  cat=0.567  driller=0.634  duck=0.761  eggbox=0.679  glue=0.527  holepuncher=0.715
+2026-08-27 11:51:31,097     saved best checkpoint (mIoU 0.6199) -> workspace/objeval/ckpt/lmo_b5_seg_head.pt
+2026-08-27 11:52:22,058 epoch 02/20 | train=0.2944 | val=0.3646 | val_mIoU=0.6507 (8/8 classes in val) | val_mIoU_all=0.6507 | lr=9.94e-05
+2026-08-27 11:52:22,058     per-class IoU: background=0.970  ape=0.506  can=0.580  cat=0.620  driller=0.671  duck=0.810  eggbox=0.734  glue=0.529  holepuncher=0.755
+2026-08-27 11:52:23,006     saved best checkpoint (mIoU 0.6507) -> workspace/objeval/ckpt/lmo_b5_seg_head.pt
+2026-08-27 11:53:13,965 epoch 03/20 | train=0.2349 | val=0.3744 | val_mIoU=0.6514 (8/8 classes in val) | val_mIoU_all=0.6514 | lr=9.76e-05
+2026-08-27 11:53:13,965     per-class IoU: background=0.970  ape=0.628  can=0.441  cat=0.659  driller=0.668  duck=0.829  eggbox=0.759  glue=0.456  holepuncher=0.771
+2026-08-27 11:53:14,778     saved best checkpoint (mIoU 0.6514) -> workspace/objeval/ckpt/lmo_b5_seg_head.pt
+2026-08-27 11:54:05,702 epoch 04/20 | train=0.2024 | val=0.3575 | val_mIoU=0.6733 (8/8 classes in val) | val_mIoU_all=0.6733 | lr=9.46e-05
+2026-08-27 11:54:05,703     per-class IoU: background=0.973  ape=0.572  can=0.527  cat=0.673  driller=0.743  duck=0.825  eggbox=0.764  glue=0.487  holepuncher=0.794
+2026-08-27 11:54:06,427     saved best checkpoint (mIoU 0.6733) -> workspace/objeval/ckpt/lmo_b5_seg_head.pt
+2026-08-27 11:54:57,389 epoch 05/20 | train=0.1792 | val=0.3218 | val_mIoU=0.7071 (8/8 classes in val) | val_mIoU_all=0.7071 | lr=9.05e-05
+2026-08-27 11:54:57,389     per-class IoU: background=0.975  ape=0.528  can=0.624  cat=0.717  driller=0.726  duck=0.828  eggbox=0.792  glue=0.667  holepuncher=0.773
+2026-08-27 11:54:58,024     saved best checkpoint (mIoU 0.7071) -> workspace/objeval/ckpt/lmo_b5_seg_head.pt
+2026-08-27 11:55:48,989 epoch 06/20 | train=0.1634 | val=0.3127 | val_mIoU=0.7130 (8/8 classes in val) | val_mIoU_all=0.7130 | lr=8.55e-05
+2026-08-27 11:55:48,989     per-class IoU: background=0.975  ape=0.526  can=0.657  cat=0.700  driller=0.720  duck=0.834  eggbox=0.792  glue=0.684  holepuncher=0.791
+2026-08-27 11:55:49,833     saved best checkpoint (mIoU 0.7130) -> workspace/objeval/ckpt/lmo_b5_seg_head.pt
+2026-08-27 11:56:40,813 epoch 07/20 | train=0.1492 | val=0.2843 | val_mIoU=0.7298 (8/8 classes in val) | val_mIoU_all=0.7298 | lr=7.96e-05
+2026-08-27 11:56:40,813     per-class IoU: background=0.976  ape=0.535  can=0.665  cat=0.701  driller=0.759  duck=0.844  eggbox=0.809  glue=0.731  holepuncher=0.795
+2026-08-27 11:56:41,808     saved best checkpoint (mIoU 0.7298) -> workspace/objeval/ckpt/lmo_b5_seg_head.pt
+2026-08-27 11:57:32,661 epoch 08/20 | train=0.1382 | val=0.2877 | val_mIoU=0.7392 (8/8 classes in val) | val_mIoU_all=0.7392 | lr=7.30e-05
+2026-08-27 11:57:32,661     per-class IoU: background=0.977  ape=0.595  can=0.630  cat=0.726  driller=0.753  duck=0.840  eggbox=0.820  glue=0.733  holepuncher=0.817
+2026-08-27 11:57:33,529     saved best checkpoint (mIoU 0.7392) -> workspace/objeval/ckpt/lmo_b5_seg_head.pt
+2026-08-27 11:58:24,621 epoch 09/20 | train=0.1287 | val=0.2902 | val_mIoU=0.7476 (8/8 classes in val) | val_mIoU_all=0.7476 | lr=6.58e-05
+2026-08-27 11:58:24,622     per-class IoU: background=0.977  ape=0.615  can=0.676  cat=0.730  driller=0.743  duck=0.850  eggbox=0.818  glue=0.748  holepuncher=0.800
+2026-08-27 11:58:25,464     saved best checkpoint (mIoU 0.7476) -> workspace/objeval/ckpt/lmo_b5_seg_head.pt
+2026-08-27 11:59:16,437 epoch 10/20 | train=0.1205 | val=0.3096 | val_mIoU=0.7260 (8/8 classes in val) | val_mIoU_all=0.7260 | lr=5.82e-05
+2026-08-27 11:59:16,438     per-class IoU: background=0.977  ape=0.532  can=0.637  cat=0.719  driller=0.760  duck=0.848  eggbox=0.813  glue=0.686  holepuncher=0.812
+2026-08-27 12:00:07,388 epoch 11/20 | train=0.1122 | val=0.3075 | val_mIoU=0.7363 (8/8 classes in val) | val_mIoU_all=0.7363 | lr=5.05e-05
+2026-08-27 12:00:07,388     per-class IoU: background=0.977  ape=0.537  can=0.638  cat=0.737  driller=0.768  duck=0.855  eggbox=0.808  glue=0.742  holepuncher=0.805
+2026-08-27 12:00:58,488 epoch 12/20 | train=0.1056 | val=0.2749 | val_mIoU=0.7552 (8/8 classes in val) | val_mIoU_all=0.7552 | lr=4.28e-05
+2026-08-27 12:00:58,488     per-class IoU: background=0.978  ape=0.638  can=0.668  cat=0.756  driller=0.768  duck=0.850  eggbox=0.811  glue=0.738  holepuncher=0.812
+2026-08-27 12:00:59,348     saved best checkpoint (mIoU 0.7552) -> workspace/objeval/ckpt/lmo_b5_seg_head.pt
+2026-08-27 12:01:50,313 epoch 13/20 | train=0.0988 | val=0.3225 | val_mIoU=0.7366 (8/8 classes in val) | val_mIoU_all=0.7366 | lr=3.52e-05
+2026-08-27 12:01:50,314     per-class IoU: background=0.977  ape=0.529  can=0.671  cat=0.734  driller=0.764  duck=0.854  eggbox=0.813  glue=0.738  holepuncher=0.790
+2026-08-27 12:02:41,391 epoch 14/20 | train=0.0930 | val=0.2992 | val_mIoU=0.7526 (8/8 classes in val) | val_mIoU_all=0.7526 | lr=2.80e-05
+2026-08-27 12:02:41,392     per-class IoU: background=0.978  ape=0.604  can=0.669  cat=0.761  driller=0.769  duck=0.852  eggbox=0.816  glue=0.741  holepuncher=0.808
+2026-08-27 12:03:32,582 epoch 15/20 | train=0.0883 | val=0.3132 | val_mIoU=0.7531 (8/8 classes in val) | val_mIoU_all=0.7531 | lr=2.14e-05
+2026-08-27 12:03:32,582     per-class IoU: background=0.978  ape=0.592  can=0.673  cat=0.753  driller=0.763  duck=0.853  eggbox=0.820  glue=0.764  holepuncher=0.807
+2026-08-27 12:04:23,725 epoch 16/20 | train=0.0843 | val=0.3107 | val_mIoU=0.7543 (8/8 classes in val) | val_mIoU_all=0.7543 | lr=1.55e-05
+2026-08-27 12:04:23,725     per-class IoU: background=0.978  ape=0.599  can=0.679  cat=0.750  driller=0.765  duck=0.853  eggbox=0.824  glue=0.762  holepuncher=0.802
+2026-08-27 12:05:14,462 epoch 17/20 | train=0.0811 | val=0.3133 | val_mIoU=0.7519 (8/8 classes in val) | val_mIoU_all=0.7519 | lr=1.05e-05
+2026-08-27 12:05:14,462     per-class IoU: background=0.978  ape=0.579  can=0.677  cat=0.744  driller=0.778  duck=0.853  eggbox=0.822  glue=0.760  holepuncher=0.803
+2026-08-27 12:06:05,451 epoch 18/20 | train=0.0789 | val=0.3176 | val_mIoU=0.7521 (8/8 classes in val) | val_mIoU_all=0.7521 | lr=6.40e-06
+2026-08-27 12:06:05,451     per-class IoU: background=0.978  ape=0.590  can=0.677  cat=0.746  driller=0.772  duck=0.851  eggbox=0.822  glue=0.759  holepuncher=0.801
+2026-08-27 12:06:56,352 epoch 19/20 | train=0.0775 | val=0.3277 | val_mIoU=0.7478 (8/8 classes in val) | val_mIoU_all=0.7478 | lr=3.42e-06
+2026-08-27 12:06:56,352     per-class IoU: background=0.978  ape=0.577  can=0.668  cat=0.746  driller=0.769  duck=0.852  eggbox=0.821  glue=0.749  holepuncher=0.801
+2026-08-27 12:07:47,376 epoch 20/20 | train=0.0767 | val=0.3272 | val_mIoU=0.7506 (8/8 classes in val) | val_mIoU_all=0.7506 | lr=1.61e-06
+2026-08-27 12:07:47,376     per-class IoU: background=0.978  ape=0.583  can=0.673  cat=0.748  driller=0.768  duck=0.851  eggbox=0.825  glue=0.754  holepuncher=0.803
+2026-08-27 12:07:47,599 done. best epoch 12 val_mIoU=0.7552; curves -> workspace/objeval/ckpt/lmo_b5_seg_head_curves.png

@@ -1,0 +1,24 @@
+{
+  "manifest": "workspace/manifests/ycbv_v3.json",
+  "checkpoint": "workspace/ckpt/sam3.pt",
+  "gpu": "NVIDIA GeForce RTX 5090",
+  "n_frames": 60,
+  "repeats": 3,
+  "warmup": 10,
+  "confidence_threshold": 0.2,
+  "precision": "bfloat16 autocast",
+  "model_build_s": 9.6,
+  "parameters_of_the_built_model_M": 840.5,
+  "ms_per_frame": {
+    "median": 87.2,
+    "mean": 87.2,
+    "min": 86.4,
+    "max": 88.4
+  },
+  "ms_set_image_median": 36.1,
+  "ms_set_text_prompt_median": 50.1,
+  "ms_mask_to_cpu_median": 0.9,
+  "ms_each_further_object_in_a_frame_median": 50.4,
+  "median_instances_per_frame": 1.0,
+  "covers": "set_image + set_text_prompt + best instance to the CPU as a boolean mask, one object per frame; excludes image decoding and model building"
+}

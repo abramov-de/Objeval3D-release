@@ -1,0 +1,67 @@
+2026-09-01 11:47:29,703 ======================================================================
+2026-09-01 11:47:29,703 args: {'data_dir': 'workspace/objeval/seg_data/ycbv_b20', 'base_model_dir': 'depth-anything/DA3-LARGE', 'seg_model_name': 'da3-large-seg', 'out_ckpt': 'workspace/objeval/ckpt/ycbv_b20_seg_head.pt', 'out_loss_plot': '', 'log_file': '', 'epochs': 20, 'batch_size': 2, 'lr': 0.0001, 'weight_decay': 0.0001, 'grad_clip_norm': 1.0, 'image_size': 504, 'num_workers': 4, 'augment': True, 'amp': False, 'max_train': 0, 'seed': 42, 'device': 'cuda'}
+2026-09-01 11:47:29,761 14 classes: ['background', 'master_chef_can', 'cracker_box', 'tomato_soup_can', 'mustard_bottle', 'tuna_fish_can', 'potted_meat_can', 'banana', 'pitcher_base', 'bowl', 'mug', 'power_drill', 'large_clamp', 'extra_large_clamp']
+2026-09-01 11:47:29,769 processing resolution (matches DA3 inference): 378x504
+2026-09-01 11:47:33,716 mask labels checked on 912 files: all within [0,13] or 255
+2026-09-01 11:47:33,732 train=684  val=228
+2026-09-01 11:47:33,953 GPU 0 (NVIDIA RTX PRO 6000 Blackwell Workstation Edition): 87.6 GiB free of 95.0 GiB
+2026-09-01 11:47:34,798 HTTP Request: HEAD https://huggingface.co/depth-anything/DA3-LARGE/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-01 11:47:34,844 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/depth-anything/DA3-LARGE/c54c26b16ec04d218e8d584ecf4bce082a9fcc20/config.json "HTTP/1.1 200 OK"
+2026-09-01 11:47:37,922 HTTP Request: HEAD https://huggingface.co/depth-anything/DA3-LARGE/resolve/main/model.safetensors "HTTP/1.1 302 Found"
+2026-09-01 11:47:41,011 base weights loaded — missing=60 (the whole seg_head, random-initialised by design), unexpected=0
+2026-09-01 11:47:41,162 seg_head output conv: 32->1  =>  32->14
+2026-09-01 11:47:41,650 trainable 32,650,862 / total 443,592,629 (7.36%)
+2026-09-01 11:48:35,843 epoch 01/20 | train=0.6196 | val=0.1759 | val_mIoU=0.8529 (13/13 classes in val) | val_mIoU_all=0.8529 | lr=1.00e-04
+2026-09-01 11:48:35,844     per-class IoU: background=0.974  master_chef_can=0.839  cracker_box=0.899  tomato_soup_can=0.812  mustard_bottle=0.885  tuna_fish_can=0.874  potted_meat_can=0.781  banana=0.869  pitcher_base=0.930  bowl=0.908  mug=0.750  power_drill=0.889  large_clamp=0.814  extra_large_clamp=0.838
+2026-09-01 11:48:36,400     saved best checkpoint (mIoU 0.8529) -> workspace/objeval/ckpt/ycbv_b20_seg_head.pt
+2026-09-01 11:49:27,188 epoch 02/20 | train=0.1316 | val=0.1205 | val_mIoU=0.8897 (13/13 classes in val) | val_mIoU_all=0.8897 | lr=9.94e-05
+2026-09-01 11:49:27,189     per-class IoU: background=0.980  master_chef_can=0.892  cracker_box=0.915  tomato_soup_can=0.888  mustard_bottle=0.920  tuna_fish_can=0.903  potted_meat_can=0.900  banana=0.777  pitcher_base=0.955  bowl=0.906  mug=0.868  power_drill=0.933  large_clamp=0.828  extra_large_clamp=0.882
+2026-09-01 11:49:28,745     saved best checkpoint (mIoU 0.8897) -> workspace/objeval/ckpt/ycbv_b20_seg_head.pt
+2026-09-01 11:50:19,581 epoch 03/20 | train=0.0993 | val=0.0972 | val_mIoU=0.9125 (13/13 classes in val) | val_mIoU_all=0.9125 | lr=9.76e-05
+2026-09-01 11:50:19,582     per-class IoU: background=0.984  master_chef_can=0.913  cracker_box=0.931  tomato_soup_can=0.908  mustard_bottle=0.951  tuna_fish_can=0.905  potted_meat_can=0.898  banana=0.923  pitcher_base=0.953  bowl=0.904  mug=0.902  power_drill=0.942  large_clamp=0.864  extra_large_clamp=0.870
+2026-09-01 11:50:21,184     saved best checkpoint (mIoU 0.9125) -> workspace/objeval/ckpt/ycbv_b20_seg_head.pt
+2026-09-01 11:51:11,702 epoch 04/20 | train=0.0810 | val=0.0840 | val_mIoU=0.9239 (13/13 classes in val) | val_mIoU_all=0.9239 | lr=9.46e-05
+2026-09-01 11:51:11,702     per-class IoU: background=0.986  master_chef_can=0.912  cracker_box=0.935  tomato_soup_can=0.903  mustard_bottle=0.946  tuna_fish_can=0.919  potted_meat_can=0.934  banana=0.920  pitcher_base=0.961  bowl=0.933  mug=0.910  power_drill=0.946  large_clamp=0.883  extra_large_clamp=0.910
+2026-09-01 11:51:12,735     saved best checkpoint (mIoU 0.9239) -> workspace/objeval/ckpt/ycbv_b20_seg_head.pt
+2026-09-01 11:52:03,435 epoch 05/20 | train=0.0723 | val=0.0817 | val_mIoU=0.9269 (13/13 classes in val) | val_mIoU_all=0.9269 | lr=9.05e-05
+2026-09-01 11:52:03,435     per-class IoU: background=0.986  master_chef_can=0.918  cracker_box=0.924  tomato_soup_can=0.927  mustard_bottle=0.953  tuna_fish_can=0.934  potted_meat_can=0.933  banana=0.942  pitcher_base=0.962  bowl=0.938  mug=0.907  power_drill=0.913  large_clamp=0.888  extra_large_clamp=0.911
+2026-09-01 11:52:04,528     saved best checkpoint (mIoU 0.9269) -> workspace/objeval/ckpt/ycbv_b20_seg_head.pt
+2026-09-01 11:52:55,189 epoch 06/20 | train=0.0663 | val=0.0998 | val_mIoU=0.9133 (13/13 classes in val) | val_mIoU_all=0.9133 | lr=8.55e-05
+2026-09-01 11:52:55,190     per-class IoU: background=0.984  master_chef_can=0.912  cracker_box=0.879  tomato_soup_can=0.903  mustard_bottle=0.948  tuna_fish_can=0.912  potted_meat_can=0.930  banana=0.948  pitcher_base=0.964  bowl=0.935  mug=0.869  power_drill=0.940  large_clamp=0.849  extra_large_clamp=0.885
+2026-09-01 11:53:45,859 epoch 07/20 | train=0.0622 | val=0.0682 | val_mIoU=0.9384 (13/13 classes in val) | val_mIoU_all=0.9384 | lr=7.96e-05
+2026-09-01 11:53:45,860     per-class IoU: background=0.989  master_chef_can=0.935  cracker_box=0.941  tomato_soup_can=0.925  mustard_bottle=0.960  tuna_fish_can=0.937  potted_meat_can=0.942  banana=0.944  pitcher_base=0.968  bowl=0.950  mug=0.925  power_drill=0.954  large_clamp=0.905  extra_large_clamp=0.914
+2026-09-01 11:53:46,905     saved best checkpoint (mIoU 0.9384) -> workspace/objeval/ckpt/ycbv_b20_seg_head.pt
+2026-09-01 11:54:37,425 epoch 08/20 | train=0.0580 | val=0.0668 | val_mIoU=0.9381 (13/13 classes in val) | val_mIoU_all=0.9381 | lr=7.30e-05
+2026-09-01 11:54:37,426     per-class IoU: background=0.989  master_chef_can=0.930  cracker_box=0.942  tomato_soup_can=0.930  mustard_bottle=0.961  tuna_fish_can=0.935  potted_meat_can=0.921  banana=0.953  pitcher_base=0.967  bowl=0.951  mug=0.927  power_drill=0.957  large_clamp=0.903  extra_large_clamp=0.918
+2026-09-01 11:55:28,433 epoch 09/20 | train=0.0557 | val=0.0615 | val_mIoU=0.9425 (13/13 classes in val) | val_mIoU_all=0.9425 | lr=6.58e-05
+2026-09-01 11:55:28,434     per-class IoU: background=0.989  master_chef_can=0.935  cracker_box=0.940  tomato_soup_can=0.940  mustard_bottle=0.968  tuna_fish_can=0.938  potted_meat_can=0.941  banana=0.956  pitcher_base=0.969  bowl=0.950  mug=0.920  power_drill=0.959  large_clamp=0.912  extra_large_clamp=0.923
+2026-09-01 11:55:29,528     saved best checkpoint (mIoU 0.9425) -> workspace/objeval/ckpt/ycbv_b20_seg_head.pt
+2026-09-01 11:56:20,357 epoch 10/20 | train=0.0527 | val=0.0610 | val_mIoU=0.9437 (13/13 classes in val) | val_mIoU_all=0.9437 | lr=5.82e-05
+2026-09-01 11:56:20,357     per-class IoU: background=0.989  master_chef_can=0.940  cracker_box=0.941  tomato_soup_can=0.939  mustard_bottle=0.968  tuna_fish_can=0.942  potted_meat_can=0.943  banana=0.956  pitcher_base=0.970  bowl=0.950  mug=0.932  power_drill=0.958  large_clamp=0.903  extra_large_clamp=0.927
+2026-09-01 11:56:21,400     saved best checkpoint (mIoU 0.9437) -> workspace/objeval/ckpt/ycbv_b20_seg_head.pt
+2026-09-01 11:57:12,034 epoch 11/20 | train=0.0500 | val=0.0611 | val_mIoU=0.9434 (13/13 classes in val) | val_mIoU_all=0.9434 | lr=5.05e-05
+2026-09-01 11:57:12,034     per-class IoU: background=0.989  master_chef_can=0.933  cracker_box=0.946  tomato_soup_can=0.942  mustard_bottle=0.964  tuna_fish_can=0.940  potted_meat_can=0.941  banana=0.955  pitcher_base=0.968  bowl=0.950  mug=0.929  power_drill=0.959  large_clamp=0.911  extra_large_clamp=0.926
+2026-09-01 11:58:02,816 epoch 12/20 | train=0.0469 | val=0.0586 | val_mIoU=0.9461 (13/13 classes in val) | val_mIoU_all=0.9461 | lr=4.28e-05
+2026-09-01 11:58:02,816     per-class IoU: background=0.990  master_chef_can=0.939  cracker_box=0.946  tomato_soup_can=0.938  mustard_bottle=0.968  tuna_fish_can=0.943  potted_meat_can=0.948  banana=0.955  pitcher_base=0.969  bowl=0.956  mug=0.934  power_drill=0.960  large_clamp=0.918  extra_large_clamp=0.926
+2026-09-01 11:58:03,991     saved best checkpoint (mIoU 0.9461) -> workspace/objeval/ckpt/ycbv_b20_seg_head.pt
+2026-09-01 11:58:54,635 epoch 13/20 | train=0.0451 | val=0.0586 | val_mIoU=0.9455 (13/13 classes in val) | val_mIoU_all=0.9455 | lr=3.52e-05
+2026-09-01 11:58:54,636     per-class IoU: background=0.990  master_chef_can=0.941  cracker_box=0.947  tomato_soup_can=0.940  mustard_bottle=0.969  tuna_fish_can=0.934  potted_meat_can=0.942  banana=0.956  pitcher_base=0.969  bowl=0.953  mug=0.932  power_drill=0.961  large_clamp=0.916  extra_large_clamp=0.930
+2026-09-01 11:59:45,302 epoch 14/20 | train=0.0424 | val=0.0572 | val_mIoU=0.9472 (13/13 classes in val) | val_mIoU_all=0.9472 | lr=2.80e-05
+2026-09-01 11:59:45,302     per-class IoU: background=0.990  master_chef_can=0.943  cracker_box=0.945  tomato_soup_can=0.943  mustard_bottle=0.968  tuna_fish_can=0.943  potted_meat_can=0.944  banana=0.958  pitcher_base=0.972  bowl=0.955  mug=0.937  power_drill=0.961  large_clamp=0.917  extra_large_clamp=0.930
+2026-09-01 11:59:46,575     saved best checkpoint (mIoU 0.9472) -> workspace/objeval/ckpt/ycbv_b20_seg_head.pt
+2026-09-01 12:00:37,408 epoch 15/20 | train=0.0401 | val=0.0575 | val_mIoU=0.9471 (13/13 classes in val) | val_mIoU_all=0.9471 | lr=2.14e-05
+2026-09-01 12:00:37,408     per-class IoU: background=0.990  master_chef_can=0.942  cracker_box=0.945  tomato_soup_can=0.943  mustard_bottle=0.970  tuna_fish_can=0.942  potted_meat_can=0.944  banana=0.958  pitcher_base=0.970  bowl=0.950  mug=0.937  power_drill=0.962  large_clamp=0.917  extra_large_clamp=0.932
+2026-09-01 12:01:27,955 epoch 16/20 | train=0.0382 | val=0.0579 | val_mIoU=0.9477 (13/13 classes in val) | val_mIoU_all=0.9477 | lr=1.55e-05
+2026-09-01 12:01:27,955     per-class IoU: background=0.990  master_chef_can=0.941  cracker_box=0.948  tomato_soup_can=0.941  mustard_bottle=0.970  tuna_fish_can=0.943  potted_meat_can=0.947  banana=0.958  pitcher_base=0.971  bowl=0.955  mug=0.937  power_drill=0.962  large_clamp=0.916  extra_large_clamp=0.931
+2026-09-01 12:01:29,264     saved best checkpoint (mIoU 0.9477) -> workspace/objeval/ckpt/ycbv_b20_seg_head.pt
+2026-09-01 12:02:19,823 epoch 17/20 | train=0.0366 | val=0.0575 | val_mIoU=0.9483 (13/13 classes in val) | val_mIoU_all=0.9483 | lr=1.05e-05
+2026-09-01 12:02:19,823     per-class IoU: background=0.990  master_chef_can=0.943  cracker_box=0.945  tomato_soup_can=0.942  mustard_bottle=0.970  tuna_fish_can=0.944  potted_meat_can=0.947  banana=0.959  pitcher_base=0.972  bowl=0.955  mug=0.937  power_drill=0.962  large_clamp=0.919  extra_large_clamp=0.931
+2026-09-01 12:02:21,031     saved best checkpoint (mIoU 0.9483) -> workspace/objeval/ckpt/ycbv_b20_seg_head.pt
+2026-09-01 12:03:11,337 epoch 18/20 | train=0.0353 | val=0.0578 | val_mIoU=0.9482 (13/13 classes in val) | val_mIoU_all=0.9482 | lr=6.40e-06
+2026-09-01 12:03:11,338     per-class IoU: background=0.990  master_chef_can=0.942  cracker_box=0.948  tomato_soup_can=0.942  mustard_bottle=0.969  tuna_fish_can=0.944  potted_meat_can=0.947  banana=0.958  pitcher_base=0.972  bowl=0.953  mug=0.938  power_drill=0.963  large_clamp=0.920  extra_large_clamp=0.930
+2026-09-01 12:04:01,935 epoch 19/20 | train=0.0343 | val=0.0582 | val_mIoU=0.9481 (13/13 classes in val) | val_mIoU_all=0.9481 | lr=3.42e-06
+2026-09-01 12:04:01,936     per-class IoU: background=0.990  master_chef_can=0.943  cracker_box=0.947  tomato_soup_can=0.941  mustard_bottle=0.970  tuna_fish_can=0.944  potted_meat_can=0.947  banana=0.959  pitcher_base=0.972  bowl=0.953  mug=0.938  power_drill=0.962  large_clamp=0.918  extra_large_clamp=0.931
+2026-09-01 12:04:52,406 epoch 20/20 | train=0.0339 | val=0.0579 | val_mIoU=0.9485 (13/13 classes in val) | val_mIoU_all=0.9485 | lr=1.61e-06
+2026-09-01 12:04:52,406     per-class IoU: background=0.990  master_chef_can=0.943  cracker_box=0.947  tomato_soup_can=0.942  mustard_bottle=0.970  tuna_fish_can=0.944  potted_meat_can=0.947  banana=0.958  pitcher_base=0.972  bowl=0.954  mug=0.939  power_drill=0.963  large_clamp=0.920  extra_large_clamp=0.931
+2026-09-01 12:04:53,679     saved best checkpoint (mIoU 0.9485) -> workspace/objeval/ckpt/ycbv_b20_seg_head.pt
+2026-09-01 12:04:53,907 done. best epoch 20 val_mIoU=0.9485; curves -> workspace/objeval/ckpt/ycbv_b20_seg_head_curves.png

@@ -1,0 +1,19 @@
+{
+  "manifest": "workspace/objeval/manifests/lmo_v3.json",
+  "git_revision": "00895a3-dirty",
+  "detector": "torchvision Mask R-CNN ResNet-50 FPN",
+  "weights": "COCO weights",
+  "input": "480-640 px, batch 1",
+  "n_frames": 60,
+  "repeats": 3,
+  "warmup": 10,
+  "median_ms_per_frame_per_repeat": [
+    35.3,
+    33.8,
+    33.8
+  ],
+  "median_ms_per_frame": 33.8,
+  "median_detections_per_frame": 34.0,
+  "gpu": "NVIDIA GeForce RTX 5090",
+  "excludes": "image decoding and host-to-device copy of the frame"
+}

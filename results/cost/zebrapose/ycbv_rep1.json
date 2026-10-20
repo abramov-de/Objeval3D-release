@@ -1,0 +1,185 @@
+{
+  "manifest": "workspace/objeval/manifests/ycbv_v3.json",
+  "dataset": "ycbv",
+  "git_revision": "00895a3-dirty",
+  "zebrapose_root": "third_party/ZebraPose",
+  "padding_ratio": 1.5,
+  "resize_method": "crop_square_resize",
+  "crop_size_img": 256,
+  "threshold": 0.5,
+  "provenance": {
+    "training_data_folder": "train_real",
+    "training_data_folder_2": "train_pbr",
+    "second_dataset_ratio": 0.875,
+    "matches_cnos_table1_row": "ZebraPose (Real) -- real+pbr mixed, not pure real"
+  },
+  "objects": {
+    "1": {
+      "obj_name": "master_chef_can",
+      "checkpoint": "workspace/ckpt/zebrapose/bop/ycbv/master_chef_can",
+      "checkpoint_fingerprint": "349672839:1790499708",
+      "best_score": 0.4900596421471173,
+      "iteration_step": 367500,
+      "n_sets": 6,
+      "n_frames": 18,
+      "n_empty_masks": 0,
+      "n_degenerate_bbox": 0,
+      "seconds": 0.3
+    },
+    "2": {
+      "obj_name": "cracker_box",
+      "checkpoint": "workspace/ckpt/zebrapose/bop/ycbv/cracker_box",
+      "checkpoint_fingerprint": "349672839:1790499691",
+      "best_score": 0.9896313364055299,
+      "iteration_step": 276000,
+      "n_sets": 6,
+      "n_frames": 18,
+      "n_empty_masks": 0,
+      "n_degenerate_bbox": 0,
+      "seconds": 0.3
+    },
+    "4": {
+      "obj_name": "tomato_soup_can",
+      "checkpoint": "workspace/ckpt/zebrapose/bop/ycbv/tomato_soup_can",
+      "checkpoint_fingerprint": "349672903:1790499728",
+      "best_score": 0.7746870653685675,
+      "iteration_step": 246000,
+      "n_sets": 6,
+      "n_frames": 18,
+      "n_empty_masks": 0,
+      "n_degenerate_bbox": 0,
+      "seconds": 0.3
+    },
+    "5": {
+      "obj_name": "mustard_bottle",
+      "checkpoint": "workspace/ckpt/zebrapose/bop/ycbv/mustard_bottle",
+      "checkpoint_fingerprint": "349672839:1790499714",
+      "best_score": 0.9775910364145658,
+      "iteration_step": 358000,
+      "n_sets": 6,
+      "n_frames": 18,
+      "n_empty_masks": 0,
+      "n_degenerate_bbox": 0,
+      "seconds": 0.3
+    },
+    "6": {
+      "obj_name": "tuna_fish_can",
+      "checkpoint": "workspace/ckpt/zebrapose/bop/ycbv/tuna_fish_can",
+      "checkpoint_fingerprint": "349672839:1790499731",
+      "best_score": 0.5810104529616724,
+      "iteration_step": 196000,
+      "n_sets": 6,
+      "n_frames": 18,
+      "n_empty_masks": 0,
+      "n_degenerate_bbox": 0,
+      "seconds": 0.2
+    },
+    "9": {
+      "obj_name": "potted_meat_can",
+      "checkpoint": "workspace/ckpt/zebrapose/bop/ycbv/potted_meat_can",
+      "checkpoint_fingerprint": "349672839:1790499715",
+      "best_score": 0.6788511749347258,
+      "iteration_step": 322500,
+      "n_sets": 6,
+      "n_frames": 18,
+      "n_empty_masks": 0,
+      "n_degenerate_bbox": 0,
+      "seconds": 0.3
+    },
+    "10": {
+      "obj_name": "banana",
+      "checkpoint": "workspace/ckpt/zebrapose/bop/ycbv/banana",
+      "checkpoint_fingerprint": "349672839:1790499693",
+      "best_score": 0.8284960422163589,
+      "iteration_step": 259500,
+      "n_sets": 6,
+      "n_frames": 18,
+      "n_empty_masks": 0,
+      "n_degenerate_bbox": 0,
+      "seconds": 0.2
+    },
+    "11": {
+      "obj_name": "pitcher_base",
+      "checkpoint": "workspace/ckpt/zebrapose/bop/ycbv/pitcher_base",
+      "checkpoint_fingerprint": "349672839:1790499712",
+      "best_score": 1.0,
+      "iteration_step": 378500,
+      "n_sets": 6,
+      "n_frames": 18,
+      "n_empty_masks": 0,
+      "n_degenerate_bbox": 0,
+      "seconds": 0.3
+    },
+    "13": {
+      "obj_name": "bowl",
+      "checkpoint": "workspace/ckpt/zebrapose/bop/ycbv/bowl",
+      "checkpoint_fingerprint": "349672839:1790499691",
+      "best_score": 0.27586206896551724,
+      "iteration_step": 331000,
+      "n_sets": 6,
+      "n_frames": 18,
+      "n_empty_masks": 0,
+      "n_degenerate_bbox": 0,
+      "seconds": 0.3
+    },
+    "14": {
+      "obj_name": "mug",
+      "checkpoint": "workspace/ckpt/zebrapose/bop/ycbv/mug",
+      "checkpoint_fingerprint": "349672839:1790499710",
+      "best_score": 0.7924528301886793,
+      "iteration_step": 336500,
+      "n_sets": 6,
+      "n_frames": 18,
+      "n_empty_masks": 0,
+      "n_degenerate_bbox": 0,
+      "seconds": 0.3
+    },
+    "15": {
+      "obj_name": "power_drill",
+      "checkpoint": "workspace/ckpt/zebrapose/bop/ycbv/power_drill",
+      "checkpoint_fingerprint": "349672839:1790499717",
+      "best_score": 0.9839167455061495,
+      "iteration_step": 325000,
+      "n_sets": 6,
+      "n_frames": 18,
+      "n_empty_masks": 0,
+      "n_degenerate_bbox": 0,
+      "seconds": 0.3
+    },
+    "19": {
+      "obj_name": "large_clamp",
+      "checkpoint": "workspace/ckpt/zebrapose/bop/ycbv/large_clamp",
+      "checkpoint_fingerprint": "349672903:1790499690",
+      "best_score": 0.8426966292134831,
+      "iteration_step": 200000,
+      "n_sets": 6,
+      "n_frames": 18,
+      "n_empty_masks": 0,
+      "n_degenerate_bbox": 0,
+      "seconds": 0.3
+    },
+    "20": {
+      "obj_name": "extra_large_clamp",
+      "checkpoint": "workspace/ckpt/zebrapose/bop/ycbv/extra_large_clamp",
+      "checkpoint_fingerprint": "349672839:1790499691",
+      "best_score": 0.9706744868035191,
+      "iteration_step": 323500,
+      "n_sets": 6,
+      "n_frames": 18,
+      "n_empty_masks": 0,
+      "n_degenerate_bbox": 0,
+      "seconds": 0.3
+    }
+  },
+  "cost": {
+    "forward_ms_per_frame": {
+      "median": 7.8,
+      "mean": 7.8
+    },
+    "n_timed_frames": 234,
+    "warmup_passes_per_network": 3,
+    "covers": "crop + resize + forward + threshold + paste-back, one object per frame, given a box; excludes image decoding, network loading and any detector",
+    "device": "cuda",
+    "gpu": "NVIDIA GeForce RTX 5090"
+  }
+}

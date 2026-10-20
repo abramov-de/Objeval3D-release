@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+
+# Everything a run produces and every download lives under workspace/
+workspace/
+
+# Depth Anything 3 is cloned here at its pinned commit when the da3 environment is built (docs/ENVIRONMENTS.md); it is not part of this repository
+third_party/Depth-Anything-3/
+
+# Weights and heavy artefacts are never tracked (the head's weights are on the Hugging Face Hub)
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.npz
+*.ply
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store

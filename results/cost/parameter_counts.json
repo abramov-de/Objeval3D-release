@@ -1,0 +1,76 @@
+[
+ {
+  "file": "workspace/objeval/ckpt/lmo_seg_head.pt",
+  "bytes": 130628345,
+  "total": 32650697,
+  "by_first_level": {
+   "seg_head": 32650697
+  }
+ },
+ {
+  "file": "~/.cache/huggingface/hub/models--depth-anything--DA3-LARGE/snapshots/c54c26b16ec04d218e8d584ecf4bce082a9fcc20/model.safetensors",
+  "bytes": 1643843860,
+  "total": 410941767,
+  "by_first_level": {
+   "model": 410941767
+  }
+ },
+ {
+  "file": "workspace/objeval/ckpt/zebrapose_ckpts_downloaded/zebrapose_ckpts/bop/lmo/ape",
+  "bytes": 349672903,
+  "total": 30460881,
+  "by_first_level": {
+   "model_state_dict": 30460881
+  }
+ },
+ {
+  "file": "workspace/objeval/ckpt/zebrapose_ckpts_downloaded/zebrapose_ckpts/bop/ycbv/banana",
+  "bytes": 349672839,
+  "total": 30460881,
+  "by_first_level": {
+   "model_state_dict": 30460881
+  }
+ },
+ {
+  "file": "workspace/ckpt/sam3.pt",
+  "bytes": 3450062241,
+  "total": 860055480,
+  "by_first_level": {
+   "detector": 848311862,
+   "tracker": 11743618
+  }
+ },
+ {
+  "file": "workspace/ckpt/sam_vit_h_4b8939.pth",
+  "bytes": 2564550879,
+  "total": 641090864,
+  "by_first_level": {
+   "image_encoder": 637026048,
+   "prompt_encoder": 6476,
+   "mask_decoder": 4058340
+  }
+ },
+ {
+  "file": "~/.cache/torch/hub/checkpoints/dinov2_vitl14_pretrain.pth",
+  "bytes": 1217586395,
+  "total": 304368640,
+  "by_first_level": {
+   "cls_token": 1024,
+   "pos_embed": 1402880,
+   "mask_token": 1024,
+   "patch_embed": 603136,
+   "blocks": 302358528,
+   "norm": 2048
+  }
+ },
+ {
+  "file": "~/.cache/torch/hub/checkpoints/maskrcnn_resnet50_fpn_coco-bf2d0c1e.pth",
+  "bytes": 178090079,
+  "total": 44454513,
+  "by_first_level": {
+   "backbone": 26852416,
+   "rpn": 593935,
+   "roi_heads": 17008162
+  }
+ }
+]

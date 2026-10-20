@@ -1,0 +1,67 @@
+{
+  "manifest": "workspace/objeval/manifests/ycbv_v3.json",
+  "git_revision": "83ac96f-dirty",
+  "device": "cuda",
+  "gpu": "NVIDIA GeForce RTX 5090",
+  "process_res": 504,
+  "n_sets": 20,
+  "n_views": 3,
+  "repeats": 3,
+  "warmup": 2,
+  "seg_ckpt": "workspace/objeval/ckpt/ycbv_seg_head.pt",
+  "params": {
+    "total_M": 443.6,
+    "seg_head_M": 32.7,
+    "seg_head_fraction": 0.0736
+  },
+  "rows": [
+    {
+      "method": "DA3 forward pass (no head)",
+      "ms_per_view_set": 105.8,
+      "ms_per_frame": 35.3,
+      "note": "the protocol pays this for the point cloud regardless of the mask source; it is not a segmentation cost"
+    },
+    {
+      "method": "DA3 forward pass + segmentation head",
+      "ms_per_view_set": 143.2,
+      "ms_per_frame": 47.7
+    },
+    {
+      "method": "segmentation head (marginal)",
+      "ms_per_view_set": 37.0,
+      "ms_per_frame": 12.3,
+      "params_M": 32.7,
+      "includes_image_loading": false,
+      "includes_model_load": false,
+      "note": "difference of the two rows above, on the same view sets: the DPT head over features the backbone already computed"
+    },
+    {
+      "method": "SAM 3",
+      "ms_per_frame": 87.2,
+      "ms_set_image_median": 36.1,
+      "ms_set_text_prompt_median": 50.1,
+      "n_frames": 60,
+      "includes_image_loading": false,
+      "includes_model_load": false,
+      "gpu": "NVIDIA GeForce RTX 5090",
+      "source": "results/cost/ycbv_sam3_cost.json",
+      "note": "model built once outside the clock; set_image + set_text_prompt + the best instance to the CPU"
+    },
+    {
+      "method": "CNOS (sam + dinov2_vitl14)",
+      "ms_per_frame": 1315.5,
+      "proposal_stage_ms": 1307.2,
+      "matching_stage_ms": 8.0,
+      "n_frames": 177,
+      "includes_image_loading": false,
+      "includes_model_load": false,
+      "proposals_per_frame": {
+        "median": 42,
+        "max": 111
+      },
+      "gpu": "NVIDIA GeForce RTX 5090",
+      "source": "workspace/objeval/masks/ycbv_cnos/cnos_run.json",
+      "note": "second pass over the frame; reference descriptors are precomputed once per object and not counted here"
+    }
+  ]
+}

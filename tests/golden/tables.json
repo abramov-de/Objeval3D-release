@@ -1,0 +1,641 @@
+{
+ "tables": {
+  "table1": {
+   "rows": [
+    [
+     "Number of objects",
+     "8",
+     "13"
+    ],
+    [
+     "Number of view sets",
+     "80",
+     "78"
+    ],
+    [
+     "Scenes in the test set",
+     "1 (Scene 2; entire test set)",
+     "4 of 12 (Scenes 48, 50, 53, 58)"
+    ],
+    [
+     "Mean object area (% of frame)",
+     "0.97 %",
+     "3.60 %"
+    ],
+    [
+     "Object diameters",
+     "102–261 mm",
+     "90–270 mm"
+    ],
+    [
+     "Distance to object / object diameter, median (per-scene medians)",
+     "5.9",
+     "5.2 (3.3–6.2)"
+    ],
+    [
+     "Object types and characteristics",
+     "painted figurines without texture, strong mutual occlusion",
+     "household items with stable names"
+    ]
+   ]
+  },
+  "table2": {
+   "rows": [
+    [
+     "Precision / Recall (IoU) ↑",
+     "1.000 / 1.000 (1.000)",
+     "0.905 / 0.907 (0.828)",
+     "---"
+    ],
+    [
+     "F@2% ↑",
+     "0.238",
+     "0.242",
+     "+1.6%"
+    ],
+    [
+     "Completeness (mm) ↓",
+     "8.84",
+     "8.97",
+     "+1.5%"
+    ],
+    [
+     "Accuracy (mm) ↓",
+     "9.99",
+     "9.01",
+     "-9.8%"
+    ]
+   ]
+  },
+  "table3": {
+   "rows": [
+    [
+     "Ground-truth",
+     "0.238",
+     "9.99",
+     "10.30",
+     "0.531",
+     "4.02",
+     "4.19",
+     "79 / 72"
+    ],
+    [
+     "Our method",
+     "0.242",
+     "9.01",
+     "9.19",
+     "0.527",
+     "4.04",
+     "4.19",
+     "79 / 72"
+    ],
+    [
+     "ZebraPose",
+     "0.244",
+     "14.45",
+     "15.86",
+     "0.521",
+     "4.07",
+     "4.26",
+     "79 / 72"
+    ],
+    [
+     "CNOS",
+     "0.217",
+     "28.49",
+     "33.22",
+     "0.467",
+     "7.08",
+     "4.25",
+     "79 / 71"
+    ],
+    [
+     "SAM 3",
+     "0.244†",
+     "19.36†",
+     "19.36",
+     "0.447",
+     "16.04",
+     "4.22",
+     "64 / 72"
+    ]
+   ]
+  },
+  "table4": {
+   "rows": [
+    [
+     "Our method",
+     "–-",
+     "32.7",
+     "32.7",
+     "1.0",
+     "1.0",
+     "47.7",
+     "1.0"
+    ],
+    [
+     "ZebraPose (given detection)",
+     "Object bounding box",
+     "243.7",
+     "396.0",
+     "7.5",
+     "12.1",
+     "43.0",
+     "0.9"
+    ],
+    [
+     "ZebraPose + detector",
+     "–-",
+     "288.1",
+     "440.4",
+     "8.8",
+     "13.5",
+     "75.0",
+     "1.6"
+    ],
+    [
+     "CNOS",
+     "Object CAD model",
+     "945.5",
+     "945.5",
+     "29.0",
+     "29.0",
+     "1350.8",
+     "28.3"
+    ],
+    [
+     "SAM 3",
+     "Text prompt",
+     "860.1",
+     "860.1",
+     "26.3",
+     "26.3",
+     "122.5",
+     "2.6"
+    ]
+   ]
+  },
+  "table5": {
+   "rows": [
+    [
+     "View sets with lower Chamfer distance than at the ground-truth pose (%)",
+     "82 %",
+     "60 %"
+    ],
+    [
+     "View sets with underestimated accuracy (%)",
+     "96 %",
+     "97 %"
+    ],
+    [
+     "Accuracy: free fit vs. reference mode (mm)",
+     "3.14 vs. 6.82",
+     "1.86 vs. 4.18"
+    ],
+    [
+     "View sets converged to the ground-truth pose",
+     "4 / 80",
+     "36 / 78"
+    ],
+    [
+     "Median rotation error from the ground-truth pose (°)",
+     "105.9°",
+     "25.6°"
+    ],
+    [
+     "Among converged sets: lower Chamfer distance than at the ground-truth pose (%)",
+     "100 % (n=4)",
+     "97 % (n=36)"
+    ],
+    [
+     "Among converged sets: underestimated accuracy (%)",
+     "100 % (n=4)",
+     "100% (n=36)"
+    ],
+    [
+     "Rank correlation with reference-mode accuracy",
+     "+0.26",
+     "+0.71"
+    ]
+   ]
+  },
+  "table6": {
+   "rows": [
+    [
+     "Reference mode",
+     "6.82",
+     "0.238",
+     "–-",
+     "4.18",
+     "0.461",
+     "–-"
+    ],
+    [
+     "Free fit (own code)",
+     "3.14",
+     "0.282",
+     "4 of 80",
+     "1.86",
+     "0.646",
+     "36 of 78"
+    ],
+    [
+     "FPFH + RANSAC",
+     "3.43",
+     "0.221",
+     "5 of 80",
+     "1.95",
+     "0.668",
+     "34 of 78"
+    ],
+    [
+     "Principal axes + ICP",
+     "5.28",
+     "0.174",
+     "1 of 80",
+     "4.33",
+     "0.367",
+     "27 of 78"
+    ],
+    [
+     "TEASER++",
+     "7.12",
+     "0.136",
+     "0 of 80",
+     "3.41",
+     "0.339",
+     "18 of 78"
+    ],
+    [
+     "Fast Global Registration",
+     "7.26",
+     "0.121",
+     "0 of 80",
+     "5.25",
+     "0.244",
+     "9 of 78"
+    ]
+   ]
+  },
+  "table7": {
+   "rows": [
+    [
+     "Accuracy at ground-truth pose (mm) ↓",
+     "1.57 mm",
+     "9.35 mm"
+    ],
+    [
+     "Accuracy after free-fit alignment (mm) ↓",
+     "0.98 mm",
+     "3.69 mm"
+    ],
+    [
+     "Meshes with lower Chamfer distance after free fit (%)",
+     "86 %",
+     "88 %"
+    ]
+   ]
+  },
+  "table8": {
+   "rows": [
+    [
+     "LM-O",
+     "Ground-truth masks",
+     "80",
+     "8",
+     "+0.98",
+     "4.0 × 10^-4",
+     "1.2 × 10^-3"
+    ],
+    [
+     "LM-O",
+     "Predicted masks (ours)",
+     "80",
+     "8",
+     "+0.90",
+     "4.6 × 10^-3",
+     "4.6 × 10^-3"
+    ],
+    [
+     "YCB-V",
+     "Ground-truth masks",
+     "78",
+     "13",
+     "+0.82",
+     "9.0 × 10^-4",
+     "1.8 × 10^-3"
+    ],
+    [
+     "YCB-V",
+     "Predicted masks (ours)",
+     "76",
+     "13",
+     "+0.96",
+     "5.0 × 10^-7",
+     "2.0 × 10^-6"
+    ]
+   ]
+  },
+  "table9": {
+   "rows": [
+    [
+     "LM-O",
+     "DA3",
+     "0.252",
+     "0.284",
+     "0.228",
+     "6.32",
+     "10.09"
+    ],
+    [
+     "LM-O",
+     "VGGT",
+     "0.272",
+     "0.308",
+     "0.264",
+     "5.51",
+     "9.02"
+    ],
+    [
+     "YCB-V",
+     "DA3",
+     "0.399",
+     "0.474",
+     "0.385",
+     "3.84",
+     "5.89"
+    ],
+    [
+     "YCB-V",
+     "VGGT",
+     "0.377",
+     "0.499",
+     "0.324",
+     "3.39",
+     "7.55"
+    ]
+   ]
+  },
+  "tableA1": {
+   "rows": [
+    [
+     "2",
+     "0.208",
+     "0.264",
+     "29.6",
+     "8.2",
+     "99"
+    ],
+    [
+     "4",
+     "0.262",
+     "0.147",
+     "38.3",
+     "8.8",
+     "123"
+    ],
+    [
+     "6",
+     "0.303",
+     "0.145",
+     "46.4",
+     "10.1",
+     "159"
+    ]
+   ]
+  },
+  "tableA2": {
+   "rows": [
+    [
+     "Number of points in the cloud",
+     "6195",
+     "10941",
+     "31103",
+     "60921"
+    ],
+    [
+     "Views within 20° of the best view (%)",
+     "58",
+     "58",
+     "100",
+     "100"
+    ],
+    [
+     "Accuracy at the ground-truth pose (mm) ↓",
+     "6.82",
+     "7.41",
+     "4.17",
+     "3.53"
+    ],
+    [
+     "F@2% at the ground-truth pose ↑",
+     "0.238",
+     "0.272",
+     "0.464",
+     "0.534"
+    ],
+    [
+     "Accuracy ratio: ground-truth pose / free fit",
+     "×2.15",
+     "×1.95",
+     "×2.17",
+     "×1.91"
+    ],
+    [
+     "Sets with lower Chamfer distance after free-fit alignment (%)",
+     "82",
+     "91",
+     "61",
+     "55"
+    ]
+   ]
+  },
+  "tableA3": {
+   "rows": [
+    [
+     "LM-O",
+     "8.97",
+     "12.55",
+     "40",
+     "0.41"
+    ],
+    [
+     "YCB-V",
+     "3.47",
+     "5.59",
+     "61",
+     "0.46"
+    ]
+   ]
+  },
+  "tableF1": {
+   "rows": [
+    [
+     "\"ape\"",
+     "\"small toy ape figurine\"",
+     "\"cracker box\"",
+     "\"cracker box\""
+    ],
+    [
+     "\"can\"",
+     "\"metal can\"",
+     "\"tomato soup can\"",
+     "\"tomato soup can\""
+    ],
+    [
+     "\"cat\"",
+     "\"small toy cat figurine\"",
+     "\"mustard bottle\"",
+     "\"mustard bottle\""
+    ],
+    [
+     "\"driller\"",
+     "\"cordless power drill\"",
+     "\"tuna fish can\"",
+     "\"small flat tuna can\""
+    ],
+    [
+     "\"duck\"",
+     "\"small yellow toy duck\"",
+     "\"potted meat can\"",
+     "\"small blue and yellow tinned meat can\""
+    ],
+    [
+     "\"eggbox\"",
+     "\"egg box\"",
+     "\"banana\"",
+     "\"banana\""
+    ],
+    [
+     "\"glue\"",
+     "\"glue bottle\"",
+     "\"pitcher base\"",
+     "\"large blue plastic pitcher\""
+    ],
+    [
+     "\"holepuncher\"",
+     "\"blue hole punch\"",
+     "\"bowl\"",
+     "\"bowl\""
+    ],
+    [
+     "",
+     "",
+     "\"mug\"",
+     "\"mug\""
+    ],
+    [
+     "",
+     "",
+     "\"power drill\"",
+     "\"cordless power drill\""
+    ],
+    [
+     "",
+     "",
+     "\"large clamp\"",
+     "\"black clamp\""
+    ],
+    [
+     "",
+     "",
+     "\"extra large clamp\"",
+     "\"large black clamp\""
+    ]
+   ]
+  },
+  "tableG1": {
+   "rows": [
+    [
+     "Accuracy at the ground-truth pose (mm) ↓",
+     "1.57",
+     "9.35"
+    ],
+    [
+     "Accuracy after free-fit alignment (mm) ↓",
+     "0.98",
+     "3.69"
+    ],
+    [
+     "Accuracy after free fit initialized at the ground-truth pose (mm) ↓",
+     "1.00",
+     "4.57"
+    ],
+    [
+     "Meshes with lower Chamfer distance after free-fit alignment (%)",
+     "86",
+     "88"
+    ],
+    [
+     "Same, with ground-truth pose initialization (%)",
+     "94",
+     "96"
+    ],
+    [
+     "Pose displacement after free fit: rotation (°), translation (% of diameter)",
+     "5.1°, 1.6%",
+     "103°, 15.5%"
+    ],
+    [
+     "Same, with ground-truth pose initialization",
+     "0.9°, 1.0%",
+     "7.3°, 6.9%"
+    ],
+    [
+     "Mesh points within 2 mm of the scan, before → after free fit",
+     "0.63 → 0.77",
+     "0.12 → 0.29"
+    ]
+   ]
+  },
+  "tableG2": {
+   "rows": [
+    [
+     "BOP model copy + independent noise (0.5–2 mm)",
+     "Ground-truth pose recovered; shift <= 0.2% of diameter",
+     "0.99–1.00"
+    ],
+    [
+     "Smoothly bent model (1–3 mm)",
+     "Rotation: 0.6–2.4°; negligible shift",
+     "1.12–1.33"
+    ],
+    [
+     "Burde et al., all-image meshes (n=78)",
+     "Shift: 1.6% of diameter; arbitrary initialization",
+     "1.60"
+    ],
+    [
+     "LM-O, lowest depth-error third",
+     "Converged: 3/27",
+     "1.56"
+    ],
+    [
+     "LM-O, middle depth-error third",
+     "Converged: 1/27",
+     "1.94"
+    ],
+    [
+     "LM-O, highest depth-error third",
+     "Converged: 0/26",
+     "2.63"
+    ],
+    [
+     "YCB-V, lowest depth-error third",
+     "Converged: 21/26",
+     "1.78"
+    ],
+    [
+     "YCB-V, middle depth-error third",
+     "Converged: 10/26",
+     "2.23"
+    ],
+    [
+     "YCB-V, highest depth-error third",
+     "Converged: 5/26",
+     "2.28"
+    ]
+   ]
+  }
+ }
+}

@@ -1,0 +1,137 @@
+{
+ "args": {
+  "manifest": "workspace/manifests/lmo_v3.json",
+  "bop_root": "workspace/data/bop/lmo",
+  "mask_dir": "workspace/wordings/o12_hole_punch",
+  "obj_ids": "12",
+  "process_res": 504,
+  "out": "workspace/wordings/o12_hole_punch/check.json"
+ },
+ "per_object": [
+  {
+   "obj_id": 12,
+   "obj_name": "holepuncher",
+   "n_sets": 10,
+   "n_views": 30,
+   "n_empty": 24,
+   "iou": 0.1498098497488439,
+   "precision": 0.8442982890207136,
+   "recall": 0.1586328715865369,
+   "iou_per_view": 0.14074046162899467,
+   "precision_per_view": 0.7399545593382406,
+   "recall_per_view": 0.15745691663831135
+  }
+ ],
+ "per_set": [
+  {
+   "set_id": "lmo_s000002_o12_v00",
+   "obj_id": 12,
+   "obj_name": "holepuncher",
+   "iou": 0.0,
+   "dice": 0.0,
+   "precision": null,
+   "recall": 0.0,
+   "pred_px": 0,
+   "gt_px": 8084
+  },
+  {
+   "set_id": "lmo_s000002_o12_v01",
+   "obj_id": 12,
+   "obj_name": "holepuncher",
+   "iou": 0.2467,
+   "dice": 0.3957,
+   "precision": 0.7714,
+   "recall": 0.2661,
+   "pred_px": 3547,
+   "gt_px": 10281
+  },
+  {
+   "set_id": "lmo_s000002_o12_v02",
+   "obj_id": 12,
+   "obj_name": "holepuncher",
+   "iou": 0.0,
+   "dice": 0.0,
+   "precision": null,
+   "recall": 0.0,
+   "pred_px": 0,
+   "gt_px": 9663
+  },
+  {
+   "set_id": "lmo_s000002_o12_v03",
+   "obj_id": 12,
+   "obj_name": "holepuncher",
+   "iou": 0.0,
+   "dice": 0.0,
+   "precision": null,
+   "recall": 0.0,
+   "pred_px": 0,
+   "gt_px": 9566
+  },
+  {
+   "set_id": "lmo_s000002_o12_v04",
+   "obj_id": 12,
+   "obj_name": "holepuncher",
+   "iou": 0.0,
+   "dice": 0.0,
+   "precision": null,
+   "recall": 0.0,
+   "pred_px": 0,
+   "gt_px": 7689
+  },
+  {
+   "set_id": "lmo_s000002_o12_v05",
+   "obj_id": 12,
+   "obj_name": "holepuncher",
+   "iou": 0.3635,
+   "dice": 0.5332,
+   "precision": 0.9322,
+   "recall": 0.3734,
+   "pred_px": 4057,
+   "gt_px": 10128
+  },
+  {
+   "set_id": "lmo_s000002_o12_v06",
+   "obj_id": 12,
+   "obj_name": "holepuncher",
+   "iou": 0.2786,
+   "dice": 0.4358,
+   "precision": 0.9019,
+   "recall": 0.2873,
+   "pred_px": 3619,
+   "gt_px": 11361
+  },
+  {
+   "set_id": "lmo_s000002_o12_v07",
+   "obj_id": 12,
+   "obj_name": "holepuncher",
+   "iou": 0.2849,
+   "dice": 0.4434,
+   "precision": 0.6927,
+   "recall": 0.3261,
+   "pred_px": 5977,
+   "gt_px": 12696
+  },
+  {
+   "set_id": "lmo_s000002_o12_v08",
+   "obj_id": 12,
+   "obj_name": "holepuncher",
+   "iou": 0.0,
+   "dice": 0.0,
+   "precision": null,
+   "recall": 0.0,
+   "pred_px": 0,
+   "gt_px": 9764
+  },
+  {
+   "set_id": "lmo_s000002_o12_v09",
+   "obj_id": 12,
+   "obj_name": "holepuncher",
+   "iou": 0.3244,
+   "dice": 0.4899,
+   "precision": 0.9234,
+   "recall": 0.3334,
+   "pred_px": 3562,
+   "gt_px": 9865
+  }
+ ]
+}

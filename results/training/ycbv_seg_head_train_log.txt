@@ -1,0 +1,111 @@
+2026-08-25 10:28:16,559 ======================================================================
+2026-08-25 10:28:16,560 args: {'data_dir': 'workspace/objeval/seg_data/ycbv', 'base_model_dir': 'depth-anything/DA3-LARGE', 'seg_model_name': 'da3-large-seg', 'out_ckpt': 'workspace/objeval/ckpt/ycbv_seg_head.pt', 'out_loss_plot': '', 'log_file': '', 'epochs': 3, 'batch_size': 2, 'lr': 0.0001, 'weight_decay': 0.0001, 'grad_clip_norm': 1.0, 'image_size': 504, 'num_workers': 4, 'augment': True, 'amp': False, 'max_train': 0, 'seed': 42, 'device': 'cuda'}
+2026-08-25 10:28:16,561 22 classes: ['background', 'master_chef_can', 'cracker_box', 'sugar_box', 'tomato_soup_can', 'mustard_bottle', 'tuna_fish_can', 'pudding_box', 'gelatin_box', 'potted_meat_can', 'banana', 'pitcher_base', 'bleach_cleanser', 'bowl', 'mug', 'power_drill', 'wood_block', 'scissors', 'large_marker', 'large_clamp', 'extra_large_clamp', 'foam_brick']
+2026-08-25 10:28:17,240 processing resolution (matches DA3 inference): 378x504
+2026-08-25 10:28:17,396 train=1720  val=627
+2026-08-25 10:28:17,735 GPU 0 (NVIDIA GeForce RTX 5090): 28.4 GiB free of 31.4 GiB
+2026-08-25 10:28:18,211 HTTP Request: HEAD https://huggingface.co/depth-anything/DA3-LARGE/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-08-25 10:28:18,256 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/depth-anything/DA3-LARGE/c54c26b16ec04d218e8d584ecf4bce082a9fcc20/config.json "HTTP/1.1 200 OK"
+2026-08-25 10:28:21,138 HTTP Request: HEAD https://huggingface.co/depth-anything/DA3-LARGE/resolve/main/model.safetensors "HTTP/1.1 302 Found"
+2026-08-25 10:28:24,086 base weights loaded — missing=60 (the whole seg_head, random-initialised by design), unexpected=0
+2026-08-25 10:28:24,237 seg_head output conv: 32->1  =>  32->22
+2026-08-25 10:28:24,653 trainable 32,651,126 / total 443,592,893 (7.36%)
+2026-08-25 10:30:33,491 epoch 01/3 | train=0.9999 | val=1.8430 | val_mIoU=0.1012 | lr=1.00e-04
+2026-08-25 10:30:33,492     per-class IoU: background=0.920  master_chef_can=0.533  cracker_box=0.234  sugar_box=0.629  tomato_soup_can=0.002  mustard_bottle=0.000  tuna_fish_can=0.000  pudding_box=nan  gelatin_box=0.000  potted_meat_can=0.000  banana=0.000  pitcher_base=0.000  bleach_cleanser=0.609  bowl=0.000  mug=0.009  power_drill=0.008  wood_block=0.000  scissors=0.000  large_marker=0.000  large_clamp=0.000  extra_large_clamp=0.000  foam_brick=0.000
+2026-08-25 10:30:33,791     saved best checkpoint (mIoU 0.1012) -> workspace/objeval/ckpt/ycbv_seg_head.pt
+2026-08-25 10:32:42,277 epoch 02/3 | train=0.5431 | val=4.9397 | val_mIoU=0.0946 | lr=7.52e-05
+2026-08-25 10:32:42,277     per-class IoU: background=0.834  master_chef_can=0.504  cracker_box=0.086  sugar_box=0.531  tomato_soup_can=0.107  mustard_bottle=0.000  tuna_fish_can=0.000  pudding_box=nan  gelatin_box=nan  potted_meat_can=0.000  banana=0.000  pitcher_base=0.000  bleach_cleanser=0.283  bowl=0.000  mug=0.000  power_drill=0.002  wood_block=0.000  scissors=nan  large_marker=nan  large_clamp=0.000  extra_large_clamp=0.000  foam_brick=nan
+2026-08-25 10:34:50,626 epoch 03/3 | train=0.0525 | val=4.7493 | val_mIoU=0.0821 | lr=2.58e-05
+2026-08-25 10:34:50,627     per-class IoU: background=0.808  master_chef_can=0.305  cracker_box=0.025  sugar_box=0.509  tomato_soup_can=0.028  mustard_bottle=0.000  tuna_fish_can=0.000  pudding_box=nan  gelatin_box=nan  potted_meat_can=0.000  banana=nan  pitcher_base=0.000  bleach_cleanser=0.362  bowl=0.000  mug=0.000  power_drill=0.003  wood_block=0.000  scissors=nan  large_marker=nan  large_clamp=0.000  extra_large_clamp=0.000  foam_brick=nan
+2026-08-25 10:34:50,857 done. best epoch 1 val_mIoU=0.1012; curves -> workspace/objeval/ckpt/ycbv_seg_head_curves.png
+2026-08-25 11:22:18,523 ======================================================================
+2026-08-25 11:22:18,523 args: {'data_dir': 'workspace/objeval/seg_data/ycbv', 'base_model_dir': 'depth-anything/DA3-LARGE', 'seg_model_name': 'da3-large-seg', 'out_ckpt': 'workspace/objeval/ckpt/ycbv_seg_head.pt', 'out_loss_plot': '', 'log_file': '', 'epochs': 3, 'batch_size': 2, 'lr': 0.0001, 'weight_decay': 0.0001, 'grad_clip_norm': 1.0, 'image_size': 504, 'num_workers': 4, 'augment': True, 'amp': False, 'max_train': 0, 'seed': 42, 'device': 'cuda'}
+2026-08-25 11:22:18,525 15 classes: ['background', 'master_chef_can', 'cracker_box', 'sugar_box', 'tomato_soup_can', 'mustard_bottle', 'tuna_fish_can', 'potted_meat_can', 'banana', 'pitcher_base', 'bowl', 'mug', 'power_drill', 'large_clamp', 'extra_large_clamp']
+2026-08-25 11:22:18,544 processing resolution (matches DA3 inference): 378x504
+2026-08-25 11:22:18,734 train=2864  val=1273
+2026-08-25 11:22:19,071 GPU 0 (NVIDIA GeForce RTX 5090): 28.4 GiB free of 31.4 GiB
+2026-08-25 11:22:19,371 HTTP Request: HEAD https://huggingface.co/depth-anything/DA3-LARGE/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-08-25 11:22:19,417 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/depth-anything/DA3-LARGE/c54c26b16ec04d218e8d584ecf4bce082a9fcc20/config.json "HTTP/1.1 200 OK"
+2026-08-25 11:22:22,202 HTTP Request: HEAD https://huggingface.co/depth-anything/DA3-LARGE/resolve/main/model.safetensors "HTTP/1.1 302 Found"
+2026-08-25 11:22:25,030 base weights loaded — missing=60 (the whole seg_head, random-initialised by design), unexpected=0
+2026-08-25 11:22:25,186 seg_head output conv: 32->1  =>  32->15
+2026-08-25 11:22:25,592 trainable 32,650,895 / total 443,592,662 (7.36%)
+2026-08-25 11:30:56,579 ======================================================================
+2026-08-25 11:30:56,579 args: {'data_dir': 'workspace/objeval/seg_data/ycbv', 'base_model_dir': 'depth-anything/DA3-LARGE', 'seg_model_name': 'da3-large-seg', 'out_ckpt': 'workspace/objeval/ckpt/ycbv_seg_head.pt', 'out_loss_plot': '', 'log_file': '', 'epochs': 3, 'batch_size': 2, 'lr': 0.0001, 'weight_decay': 0.0001, 'grad_clip_norm': 1.0, 'image_size': 504, 'num_workers': 4, 'augment': True, 'amp': False, 'max_train': 0, 'seed': 42, 'device': 'cuda'}
+2026-08-25 11:30:56,581 15 classes: ['background', 'master_chef_can', 'cracker_box', 'sugar_box', 'tomato_soup_can', 'mustard_bottle', 'tuna_fish_can', 'potted_meat_can', 'banana', 'pitcher_base', 'bowl', 'mug', 'power_drill', 'large_clamp', 'extra_large_clamp']
+2026-08-25 11:30:56,592 processing resolution (matches DA3 inference): 378x504
+2026-08-25 11:31:06,818 mask labels checked on 2341 files: all within [0,14] or 255
+2026-08-25 11:31:06,856 train=1695  val=646
+2026-08-25 11:31:07,179 GPU 0 (NVIDIA GeForce RTX 5090): 28.4 GiB free of 31.4 GiB
+2026-08-25 11:31:07,593 HTTP Request: HEAD https://huggingface.co/depth-anything/DA3-LARGE/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-08-25 11:31:07,642 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/depth-anything/DA3-LARGE/c54c26b16ec04d218e8d584ecf4bce082a9fcc20/config.json "HTTP/1.1 200 OK"
+2026-08-25 11:31:10,654 HTTP Request: HEAD https://huggingface.co/depth-anything/DA3-LARGE/resolve/main/model.safetensors "HTTP/1.1 302 Found"
+2026-08-25 11:31:13,784 base weights loaded — missing=60 (the whole seg_head, random-initialised by design), unexpected=0
+2026-08-25 11:31:13,947 seg_head output conv: 32->1  =>  32->15
+2026-08-25 11:31:14,374 trainable 32,650,895 / total 443,592,662 (7.36%)
+2026-08-25 11:33:22,978 epoch 01/3 | train=0.3603 | val=1.0908 | val_mIoU=0.2268 | lr=1.00e-04
+2026-08-25 11:33:22,978     per-class IoU: background=0.903  master_chef_can=0.607  cracker_box=0.418  sugar_box=0.774  tomato_soup_can=0.369  mustard_bottle=0.000  tuna_fish_can=0.602  potted_meat_can=0.092  banana=0.000  pitcher_base=0.000  bowl=0.000  mug=0.000  power_drill=0.312  large_clamp=0.000  extra_large_clamp=0.000
+2026-08-25 11:33:24,071     saved best checkpoint (mIoU 0.2268) -> workspace/objeval/ckpt/ycbv_seg_head.pt
+2026-08-25 11:35:32,375 epoch 02/3 | train=0.0865 | val=1.1982 | val_mIoU=0.2158 | lr=7.52e-05
+2026-08-25 11:35:32,375     per-class IoU: background=0.902  master_chef_can=0.711  cracker_box=0.260  sugar_box=0.814  tomato_soup_can=0.336  mustard_bottle=0.000  tuna_fish_can=0.526  potted_meat_can=0.005  banana=0.000  pitcher_base=0.000  bowl=0.000  mug=0.000  power_drill=0.369  large_clamp=0.000  extra_large_clamp=0.000
+2026-08-25 11:37:40,862 epoch 03/3 | train=0.0627 | val=1.2211 | val_mIoU=0.2126 | lr=2.58e-05
+2026-08-25 11:37:40,862     per-class IoU: background=0.902  master_chef_can=0.670  cracker_box=0.357  sugar_box=0.682  tomato_soup_can=0.358  mustard_bottle=0.000  tuna_fish_can=0.552  potted_meat_can=0.008  banana=0.000  pitcher_base=0.000  bowl=0.000  mug=0.000  power_drill=0.349  large_clamp=0.000  extra_large_clamp=0.000
+2026-08-25 11:37:41,072 done. best epoch 1 val_mIoU=0.2268; curves -> workspace/objeval/ckpt/ycbv_seg_head_curves.png
+2026-08-25 12:12:25,423 ======================================================================
+2026-08-25 12:12:25,423 args: {'data_dir': 'workspace/objeval/seg_data/ycbv', 'base_model_dir': 'depth-anything/DA3-LARGE', 'seg_model_name': 'da3-large-seg', 'out_ckpt': 'workspace/objeval/ckpt/ycbv_seg_head.pt', 'out_loss_plot': '', 'log_file': '', 'epochs': 20, 'batch_size': 2, 'lr': 0.0001, 'weight_decay': 0.0001, 'grad_clip_norm': 1.0, 'image_size': 504, 'num_workers': 4, 'augment': True, 'amp': False, 'max_train': 0, 'seed': 42, 'device': 'cuda'}
+2026-08-25 12:12:25,424 15 classes: ['background', 'master_chef_can', 'cracker_box', 'sugar_box', 'tomato_soup_can', 'mustard_bottle', 'tuna_fish_can', 'potted_meat_can', 'banana', 'pitcher_base', 'bowl', 'mug', 'power_drill', 'large_clamp', 'extra_large_clamp']
+2026-08-25 12:12:25,435 processing resolution (matches DA3 inference): 378x504
+2026-08-25 12:12:35,546 mask labels checked on 2341 files: all within [0,14] or 255
+2026-08-25 12:12:35,583 train=1695  val=646
+2026-08-25 12:12:35,966 GPU 0 (NVIDIA GeForce RTX 5090): 28.4 GiB free of 31.4 GiB
+2026-08-25 12:12:36,265 HTTP Request: HEAD https://huggingface.co/depth-anything/DA3-LARGE/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-08-25 12:12:36,313 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/depth-anything/DA3-LARGE/c54c26b16ec04d218e8d584ecf4bce082a9fcc20/config.json "HTTP/1.1 200 OK"
+2026-08-25 12:12:39,324 HTTP Request: HEAD https://huggingface.co/depth-anything/DA3-LARGE/resolve/main/model.safetensors "HTTP/1.1 302 Found"
+2026-08-25 12:12:42,299 base weights loaded — missing=60 (the whole seg_head, random-initialised by design), unexpected=0
+2026-08-25 12:12:42,452 seg_head output conv: 32->1  =>  32->15
+2026-08-25 12:12:42,957 trainable 32,650,895 / total 443,592,662 (7.36%)
+2026-08-25 12:14:52,693 epoch 01/20 | train=0.3544 | val=1.3094 | val_mIoU=0.3625 (7/14 classes in val) | val_mIoU_all=0.1813 | lr=1.00e-04
+2026-08-25 12:14:52,693     per-class IoU: background=0.907  master_chef_can=0.624  cracker_box=0.219  sugar_box=0.716  tomato_soup_can=0.311  mustard_bottle=0.000*  tuna_fish_can=0.476  potted_meat_can=0.011  banana=0.000*  pitcher_base=0.000*  bowl=0.000*  mug=0.000*  power_drill=0.181  large_clamp=0.000*  extra_large_clamp=0.000*   (* absent from val, excluded from val_mIoU)
+2026-08-25 12:14:53,429     saved best checkpoint (mIoU 0.3625) -> workspace/objeval/ckpt/ycbv_seg_head.pt
+2026-08-25 12:17:02,373 epoch 02/20 | train=0.0912 | val=1.3410 | val_mIoU=0.4022 (7/14 classes in val) | val_mIoU_all=0.2011 | lr=9.94e-05
+2026-08-25 12:17:02,373     per-class IoU: background=0.907  master_chef_can=0.647  cracker_box=0.177  sugar_box=0.727  tomato_soup_can=0.346  mustard_bottle=0.000*  tuna_fish_can=0.507  potted_meat_can=0.025  banana=0.000*  pitcher_base=0.000*  bowl=0.000*  mug=0.000*  power_drill=0.385  large_clamp=0.000*  extra_large_clamp=0.000*   (* absent from val, excluded from val_mIoU)
+2026-08-25 12:17:02,795     saved best checkpoint (mIoU 0.4022) -> workspace/objeval/ckpt/ycbv_seg_head.pt
+2026-08-25 12:19:10,759 epoch 03/20 | train=0.0710 | val=1.6156 | val_mIoU=0.3542 (7/14 classes in val) | val_mIoU_all=0.1771 | lr=9.76e-05
+2026-08-25 12:19:10,759     per-class IoU: background=0.907  master_chef_can=0.443  cracker_box=0.137  sugar_box=0.673  tomato_soup_can=0.351  mustard_bottle=0.000*  tuna_fish_can=0.564  potted_meat_can=0.005  banana=0.000*  pitcher_base=0.000*  bowl=0.000*  mug=0.000*  power_drill=0.307  large_clamp=0.000*  extra_large_clamp=0.000*   (* absent from val, excluded from val_mIoU)
+2026-08-25 12:21:18,566 epoch 04/20 | train=0.0632 | val=1.7968 | val_mIoU=0.3771 (7/14 classes in val) | val_mIoU_all=0.1886 | lr=9.46e-05
+2026-08-25 12:21:18,566     per-class IoU: background=0.880  master_chef_can=0.708  cracker_box=0.076  sugar_box=0.715  tomato_soup_can=0.395  mustard_bottle=0.000*  tuna_fish_can=0.530  potted_meat_can=0.013  banana=0.000*  pitcher_base=0.000*  bowl=0.000*  mug=0.000*  power_drill=0.203  large_clamp=0.000*  extra_large_clamp=0.000*   (* absent from val, excluded from val_mIoU)
+2026-08-25 12:23:26,549 epoch 05/20 | train=0.0585 | val=1.5132 | val_mIoU=0.3731 (7/14 classes in val) | val_mIoU_all=0.1866 | lr=9.05e-05
+2026-08-25 12:23:26,549     per-class IoU: background=0.909  master_chef_can=0.713  cracker_box=0.154  sugar_box=0.570  tomato_soup_can=0.329  mustard_bottle=0.000*  tuna_fish_can=0.589  potted_meat_can=0.006  banana=0.000*  pitcher_base=0.000*  bowl=0.000*  mug=0.000*  power_drill=0.251  large_clamp=0.000*  extra_large_clamp=0.000*   (* absent from val, excluded from val_mIoU)
+2026-08-25 12:25:34,646 epoch 06/20 | train=0.0559 | val=1.3677 | val_mIoU=0.4265 (7/14 classes in val) | val_mIoU_all=0.2132 | lr=8.55e-05
+2026-08-25 12:25:34,647     per-class IoU: background=0.909  master_chef_can=0.659  cracker_box=0.304  sugar_box=0.752  tomato_soup_can=0.336  mustard_bottle=0.000*  tuna_fish_can=0.568  potted_meat_can=0.025  banana=0.000*  pitcher_base=0.000*  bowl=0.000*  mug=0.000*  power_drill=0.341  large_clamp=0.000*  extra_large_clamp=0.000*   (* absent from val, excluded from val_mIoU)
+2026-08-25 12:25:35,339     saved best checkpoint (mIoU 0.4265) -> workspace/objeval/ckpt/ycbv_seg_head.pt
+2026-08-25 12:27:43,239 epoch 07/20 | train=0.0522 | val=1.3971 | val_mIoU=0.4092 (7/14 classes in val) | val_mIoU_all=0.2046 | lr=7.96e-05
+2026-08-25 12:27:43,239     per-class IoU: background=0.917  master_chef_can=0.708  cracker_box=0.287  sugar_box=0.577  tomato_soup_can=0.349  mustard_bottle=0.000*  tuna_fish_can=0.579  potted_meat_can=0.018  banana=0.000*  pitcher_base=0.000*  bowl=0.000*  mug=0.000*  power_drill=0.347  large_clamp=0.000*  extra_large_clamp=0.000*   (* absent from val, excluded from val_mIoU)
+2026-08-25 12:29:51,502 epoch 08/20 | train=0.0507 | val=1.4553 | val_mIoU=0.3939 (7/14 classes in val) | val_mIoU_all=0.1969 | lr=7.30e-05
+2026-08-25 12:29:51,502     per-class IoU: background=0.903  master_chef_can=0.708  cracker_box=0.214  sugar_box=0.588  tomato_soup_can=0.356  mustard_bottle=0.000*  tuna_fish_can=0.597  potted_meat_can=0.008  banana=0.000*  pitcher_base=0.000*  bowl=0.000*  mug=0.000*  power_drill=0.287  large_clamp=0.000*  extra_large_clamp=0.000*   (* absent from val, excluded from val_mIoU)
+2026-08-25 12:31:59,157 epoch 09/20 | train=0.0480 | val=1.4108 | val_mIoU=0.4200 (7/14 classes in val) | val_mIoU_all=0.2100 | lr=6.58e-05
+2026-08-25 12:31:59,157     per-class IoU: background=0.908  master_chef_can=0.738  cracker_box=0.306  sugar_box=0.654  tomato_soup_can=0.348  mustard_bottle=0.000*  tuna_fish_can=0.568  potted_meat_can=0.015  banana=0.000*  pitcher_base=0.000*  bowl=0.000*  mug=0.000*  power_drill=0.311  large_clamp=0.000*  extra_large_clamp=0.000*   (* absent from val, excluded from val_mIoU)
+2026-08-25 12:34:06,447 epoch 10/20 | train=0.0460 | val=1.5230 | val_mIoU=0.4290 (7/14 classes in val) | val_mIoU_all=0.2145 | lr=5.82e-05
+2026-08-25 12:34:06,447     per-class IoU: background=0.911  master_chef_can=0.707  cracker_box=0.284  sugar_box=0.691  tomato_soup_can=0.346  mustard_bottle=0.000*  tuna_fish_can=0.658  potted_meat_can=0.008  banana=0.000*  pitcher_base=0.000*  bowl=0.000*  mug=0.000*  power_drill=0.309  large_clamp=0.000*  extra_large_clamp=0.000*   (* absent from val, excluded from val_mIoU)
+2026-08-25 12:34:07,306     saved best checkpoint (mIoU 0.4290) -> workspace/objeval/ckpt/ycbv_seg_head.pt
+2026-08-25 12:36:14,268 epoch 11/20 | train=0.0440 | val=1.5688 | val_mIoU=0.3964 (7/14 classes in val) | val_mIoU_all=0.1982 | lr=5.05e-05
+2026-08-25 12:36:14,268     per-class IoU: background=0.907  master_chef_can=0.684  cracker_box=0.275  sugar_box=0.591  tomato_soup_can=0.360  mustard_bottle=0.000*  tuna_fish_can=0.558  potted_meat_can=0.023  banana=0.000*  pitcher_base=0.000*  bowl=0.000*  mug=0.000*  power_drill=0.283  large_clamp=0.000*  extra_large_clamp=0.000*   (* absent from val, excluded from val_mIoU)
+2026-08-25 12:38:21,664 epoch 12/20 | train=0.0422 | val=1.4845 | val_mIoU=0.4166 (7/14 classes in val) | val_mIoU_all=0.2083 | lr=4.28e-05
+2026-08-25 12:38:21,664     per-class IoU: background=0.917  master_chef_can=0.671  cracker_box=0.287  sugar_box=0.649  tomato_soup_can=0.338  mustard_bottle=0.000*  tuna_fish_can=0.594  potted_meat_can=0.016  banana=0.000*  pitcher_base=0.000*  bowl=0.000*  mug=0.000*  power_drill=0.361  large_clamp=0.000*  extra_large_clamp=0.000*   (* absent from val, excluded from val_mIoU)
+2026-08-25 12:40:28,740 epoch 13/20 | train=0.0400 | val=1.6366 | val_mIoU=0.3962 (7/14 classes in val) | val_mIoU_all=0.1981 | lr=3.52e-05
+2026-08-25 12:40:28,740     per-class IoU: background=0.911  master_chef_can=0.684  cracker_box=0.266  sugar_box=0.561  tomato_soup_can=0.370  mustard_bottle=0.000*  tuna_fish_can=0.569  potted_meat_can=0.008  banana=0.000*  pitcher_base=0.000*  bowl=0.000*  mug=0.000*  power_drill=0.316  large_clamp=0.000*  extra_large_clamp=0.000*   (* absent from val, excluded from val_mIoU)
+2026-08-25 12:42:36,404 epoch 14/20 | train=0.0379 | val=1.5274 | val_mIoU=0.4276 (7/14 classes in val) | val_mIoU_all=0.2138 | lr=2.80e-05
+2026-08-25 12:42:36,404     per-class IoU: background=0.916  master_chef_can=0.678  cracker_box=0.331  sugar_box=0.616  tomato_soup_can=0.372  mustard_bottle=0.000*  tuna_fish_can=0.617  potted_meat_can=0.020  banana=0.000*  pitcher_base=0.000*  bowl=0.000*  mug=0.000*  power_drill=0.358  large_clamp=0.000*  extra_large_clamp=0.000*   (* absent from val, excluded from val_mIoU)
+2026-08-25 12:44:45,355 epoch 15/20 | train=0.0359 | val=1.5698 | val_mIoU=0.4143 (7/14 classes in val) | val_mIoU_all=0.2071 | lr=2.14e-05
+2026-08-25 12:44:45,355     per-class IoU: background=0.914  master_chef_can=0.662  cracker_box=0.322  sugar_box=0.631  tomato_soup_can=0.361  mustard_bottle=0.000*  tuna_fish_can=0.566  potted_meat_can=0.013  banana=0.000*  pitcher_base=0.000*  bowl=0.000*  mug=0.000*  power_drill=0.345  large_clamp=0.000*  extra_large_clamp=0.000*   (* absent from val, excluded from val_mIoU)
+2026-08-25 12:46:53,567 epoch 16/20 | train=0.0343 | val=1.6238 | val_mIoU=0.4131 (7/14 classes in val) | val_mIoU_all=0.2065 | lr=1.55e-05
+2026-08-25 12:46:53,568     per-class IoU: background=0.916  master_chef_can=0.670  cracker_box=0.305  sugar_box=0.590  tomato_soup_can=0.366  mustard_bottle=0.000*  tuna_fish_can=0.585  potted_meat_can=0.018  banana=0.000*  pitcher_base=0.000*  bowl=0.000*  mug=0.000*  power_drill=0.357  large_clamp=0.000*  extra_large_clamp=0.000*   (* absent from val, excluded from val_mIoU)
+2026-08-25 12:49:01,171 epoch 17/20 | train=0.0328 | val=1.7181 | val_mIoU=0.4124 (7/14 classes in val) | val_mIoU_all=0.2062 | lr=1.05e-05
+2026-08-25 12:49:01,172     per-class IoU: background=0.912  master_chef_can=0.667  cracker_box=0.318  sugar_box=0.601  tomato_soup_can=0.366  mustard_bottle=0.000*  tuna_fish_can=0.578  potted_meat_can=0.015  banana=0.000*  pitcher_base=0.000*  bowl=0.000*  mug=0.000*  power_drill=0.342  large_clamp=0.000*  extra_large_clamp=0.000*   (* absent from val, excluded from val_mIoU)
+2026-08-25 12:51:09,074 epoch 18/20 | train=0.0315 | val=1.7237 | val_mIoU=0.4108 (7/14 classes in val) | val_mIoU_all=0.2054 | lr=6.40e-06
+2026-08-25 12:51:09,075     per-class IoU: background=0.913  master_chef_can=0.652  cracker_box=0.333  sugar_box=0.598  tomato_soup_can=0.363  mustard_bottle=0.000*  tuna_fish_can=0.585  potted_meat_can=0.012  banana=0.000*  pitcher_base=0.000*  bowl=0.000*  mug=0.000*  power_drill=0.332  large_clamp=0.000*  extra_large_clamp=0.000*   (* absent from val, excluded from val_mIoU)
+2026-08-25 12:53:17,562 epoch 19/20 | train=0.0306 | val=1.7445 | val_mIoU=0.4116 (7/14 classes in val) | val_mIoU_all=0.2058 | lr=3.42e-06
+2026-08-25 12:53:17,563     per-class IoU: background=0.911  master_chef_can=0.652  cracker_box=0.328  sugar_box=0.618  tomato_soup_can=0.364  mustard_bottle=0.000*  tuna_fish_can=0.573  potted_meat_can=0.012  banana=0.000*  pitcher_base=0.000*  bowl=0.000*  mug=0.000*  power_drill=0.334  large_clamp=0.000*  extra_large_clamp=0.000*   (* absent from val, excluded from val_mIoU)
+2026-08-25 12:55:27,009 epoch 20/20 | train=0.0302 | val=1.7364 | val_mIoU=0.4137 (7/14 classes in val) | val_mIoU_all=0.2068 | lr=1.61e-06
+2026-08-25 12:55:27,009     per-class IoU: background=0.912  master_chef_can=0.657  cracker_box=0.328  sugar_box=0.611  tomato_soup_can=0.365  mustard_bottle=0.000*  tuna_fish_can=0.585  potted_meat_can=0.014  banana=0.000*  pitcher_base=0.000*  bowl=0.000*  mug=0.000*  power_drill=0.335  large_clamp=0.000*  extra_large_clamp=0.000*   (* absent from val, excluded from val_mIoU)
+2026-08-25 12:55:27,243 done. best epoch 10 val_mIoU=0.4290; curves -> workspace/objeval/ckpt/ycbv_seg_head_curves.png

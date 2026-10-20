@@ -1,0 +1,137 @@
+{
+ "args": {
+  "manifest": "workspace/manifests/lmo_v3.json",
+  "bop_root": "workspace/data/bop/lmo",
+  "mask_dir": "workspace/wordings/o6_white_cat_figurine",
+  "obj_ids": "6",
+  "process_res": 504,
+  "out": "workspace/wordings/o6_white_cat_figurine/check.json"
+ },
+ "per_object": [
+  {
+   "obj_id": 6,
+   "obj_name": "cat",
+   "n_sets": 10,
+   "n_views": 30,
+   "n_empty": 30,
+   "iou": 0.0,
+   "precision": null,
+   "recall": 0.0,
+   "iou_per_view": 0.0,
+   "precision_per_view": null,
+   "recall_per_view": 0.0
+  }
+ ],
+ "per_set": [
+  {
+   "set_id": "lmo_s000002_o06_v00",
+   "obj_id": 6,
+   "obj_name": "cat",
+   "iou": 0.0,
+   "dice": 0.0,
+   "precision": null,
+   "recall": 0.0,
+   "pred_px": 0,
+   "gt_px": 4518
+  },
+  {
+   "set_id": "lmo_s000002_o06_v01",
+   "obj_id": 6,
+   "obj_name": "cat",
+   "iou": 0.0,
+   "dice": 0.0,
+   "precision": null,
+   "recall": 0.0,
+   "pred_px": 0,
+   "gt_px": 4262
+  },
+  {
+   "set_id": "lmo_s000002_o06_v02",
+   "obj_id": 6,
+   "obj_name": "cat",
+   "iou": 0.0,
+   "dice": 0.0,
+   "precision": null,
+   "recall": 0.0,
+   "pred_px": 0,
+   "gt_px": 4902
+  },
+  {
+   "set_id": "lmo_s000002_o06_v03",
+   "obj_id": 6,
+   "obj_name": "cat",
+   "iou": 0.0,
+   "dice": 0.0,
+   "precision": null,
+   "recall": 0.0,
+   "pred_px": 0,
+   "gt_px": 4000
+  },
+  {
+   "set_id": "lmo_s000002_o06_v04",
+   "obj_id": 6,
+   "obj_name": "cat",
+   "iou": 0.0,
+   "dice": 0.0,
+   "precision": null,
+   "recall": 0.0,
+   "pred_px": 0,
+   "gt_px": 4915
+  },
+  {
+   "set_id": "lmo_s000002_o06_v05",
+   "obj_id": 6,
+   "obj_name": "cat",
+   "iou": 0.0,
+   "dice": 0.0,
+   "precision": null,
+   "recall": 0.0,
+   "pred_px": 0,
+   "gt_px": 4809
+  },
+  {
+   "set_id": "lmo_s000002_o06_v06",
+   "obj_id": 6,
+   "obj_name": "cat",
+   "iou": 0.0,
+   "dice": 0.0,
+   "precision": null,
+   "recall": 0.0,
+   "pred_px": 0,
+   "gt_px": 5183
+  },
+  {
+   "set_id": "lmo_s000002_o06_v07",
+   "obj_id": 6,
+   "obj_name": "cat",
+   "iou": 0.0,
+   "dice": 0.0,
+   "precision": null,
+   "recall": 0.0,
+   "pred_px": 0,
+   "gt_px": 4459
+  },
+  {
+   "set_id": "lmo_s000002_o06_v08",
+   "obj_id": 6,
+   "obj_name": "cat",
+   "iou": 0.0,
+   "dice": 0.0,
+   "precision": null,
+   "recall": 0.0,
+   "pred_px": 0,
+   "gt_px": 3888
+  },
+  {
+   "set_id": "lmo_s000002_o06_v09",
+   "obj_id": 6,
+   "obj_name": "cat",
+   "iou": 0.0,
+   "dice": 0.0,
+   "precision": null,
+   "recall": 0.0,
+   "pred_px": 0,
+   "gt_px": 4322
+  }
+ ]
+}

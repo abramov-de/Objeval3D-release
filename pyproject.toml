@@ -1,0 +1,51 @@
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[project]
+name = "objeval3d"
+version = "0.1.0"
+description = "Object-level evaluation of feed-forward multi-view reconstruction: from lightweight segmentation to anchored alignment"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "Apache-2.0" }
+authors = [{ name = "Denis Abramov" }]
+dependencies = [
+  "numpy>=1.24",
+  "scipy>=1.10",
+  "opencv-python-headless>=4.8,<4.12",  # 4.12 and later need numpy 2, Depth Anything 3 needs numpy below 2
+  "pillow",
+  "tqdm",
+]
+
+[project.optional-dependencies]
+# The tables and figures of the paper from the result files need no GPU.
+analysis = ["matplotlib>=3.7"]
+# The third-party free-alignment searches of the generality check (TEASER++ is built from source, see objeval3d.align.baselines).
+# Table 6 was produced with Open3D 0.19.0; its RANSAC has no seed, so the version matters.
+baselines = ["open3d==0.19.0"]
+# Stages 1-2 and the segmenters need a GPU and the reconstruction models; see docs/ENVIRONMENTS.md. `addict` is imported by Depth Anything 3
+# but not declared in its own requirements (at the pinned commit).
+gpu = ["torch>=2.1", "torchvision", "huggingface_hub", "omegaconf", "safetensors", "addict"]
+dev = ["pytest>=7", "ruff"]
+
+[project.urls]
+Repository = "https://github.com/abramov-de/Objeval3D-release"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/objeval3d"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-q -m 'not slow'"
+markers = ["slow: exhaustive checks that take minutes (run with `pytest -m slow`)"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+extend-exclude = ["third_party"]  # other projects, installed from their own repositories
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I"]
+ignore = ["E501"]

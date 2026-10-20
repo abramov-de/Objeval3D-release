@@ -1,0 +1,19 @@
+{
+  "manifest": "workspace/objeval/manifests/ycbv_v3.json",
+  "git_revision": "00895a3-dirty",
+  "detector": "torchvision Mask R-CNN ResNet-50 FPN",
+  "weights": "COCO weights",
+  "input": "480-640 px, batch 1",
+  "n_frames": 60,
+  "repeats": 3,
+  "warmup": 10,
+  "median_ms_per_frame_per_repeat": [
+    30.7,
+    30.3,
+    30.0
+  ],
+  "median_ms_per_frame": 30.3,
+  "median_detections_per_frame": 26.0,
+  "gpu": "NVIDIA GeForce RTX 5090",
+  "excludes": "image decoding and host-to-device copy of the frame"
+}

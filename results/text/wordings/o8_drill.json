@@ -1,0 +1,137 @@
+{
+ "args": {
+  "manifest": "workspace/manifests/lmo_v3.json",
+  "bop_root": "workspace/data/bop/lmo",
+  "mask_dir": "workspace/wordings/o8_drill",
+  "obj_ids": "8",
+  "process_res": 504,
+  "out": "workspace/wordings/o8_drill/check.json"
+ },
+ "per_object": [
+  {
+   "obj_id": 8,
+   "obj_name": "driller",
+   "n_sets": 10,
+   "n_views": 30,
+   "n_empty": 4,
+   "iou": 0.7596726375161791,
+   "precision": 0.9283652783221321,
+   "recall": 0.8097843998846512,
+   "iou_per_view": 0.7331299160411487,
+   "precision_per_view": 0.9292821459989498,
+   "recall_per_view": 0.7847776824566426
+  }
+ ],
+ "per_set": [
+  {
+   "set_id": "lmo_s000002_o08_v00",
+   "obj_id": 8,
+   "obj_name": "driller",
+   "iou": 0.8646,
+   "dice": 0.9274,
+   "precision": 0.9433,
+   "recall": 0.912,
+   "pred_px": 20204,
+   "gt_px": 20897
+  },
+  {
+   "set_id": "lmo_s000002_o08_v01",
+   "obj_id": 8,
+   "obj_name": "driller",
+   "iou": 0.8815,
+   "dice": 0.937,
+   "precision": 0.9534,
+   "recall": 0.9212,
+   "pred_px": 19625,
+   "gt_px": 20311
+  },
+  {
+   "set_id": "lmo_s000002_o08_v02",
+   "obj_id": 8,
+   "obj_name": "driller",
+   "iou": 0.8767,
+   "dice": 0.9343,
+   "precision": 0.9547,
+   "recall": 0.9147,
+   "pred_px": 18161,
+   "gt_px": 18954
+  },
+  {
+   "set_id": "lmo_s000002_o08_v03",
+   "obj_id": 8,
+   "obj_name": "driller",
+   "iou": 0.5832,
+   "dice": 0.7367,
+   "precision": 0.8086,
+   "recall": 0.6766,
+   "pred_px": 10486,
+   "gt_px": 12532
+  },
+  {
+   "set_id": "lmo_s000002_o08_v04",
+   "obj_id": 8,
+   "obj_name": "driller",
+   "iou": 0.6117,
+   "dice": 0.759,
+   "precision": 0.9559,
+   "recall": 0.6294,
+   "pred_px": 7802,
+   "gt_px": 11849
+  },
+  {
+   "set_id": "lmo_s000002_o08_v05",
+   "obj_id": 8,
+   "obj_name": "driller",
+   "iou": 0.3778,
+   "dice": 0.5484,
+   "precision": 0.9736,
+   "recall": 0.3817,
+   "pred_px": 3676,
+   "gt_px": 9376
+  },
+  {
+   "set_id": "lmo_s000002_o08_v06",
+   "obj_id": 8,
+   "obj_name": "driller",
+   "iou": 0.8441,
+   "dice": 0.9155,
+   "precision": 0.9196,
+   "recall": 0.9114,
+   "pred_px": 17677,
+   "gt_px": 17835
+  },
+  {
+   "set_id": "lmo_s000002_o08_v07",
+   "obj_id": 8,
+   "obj_name": "driller",
+   "iou": 0.8786,
+   "dice": 0.9354,
+   "precision": 0.9425,
+   "recall": 0.9284,
+   "pred_px": 17789,
+   "gt_px": 18061
+  },
+  {
+   "set_id": "lmo_s000002_o08_v08",
+   "obj_id": 8,
+   "obj_name": "driller",
+   "iou": 0.8682,
+   "dice": 0.9294,
+   "precision": 0.9673,
+   "recall": 0.8944,
+   "pred_px": 17779,
+   "gt_px": 19228
+  },
+  {
+   "set_id": "lmo_s000002_o08_v09",
+   "obj_id": 8,
+   "obj_name": "driller",
+   "iou": 0.8104,
+   "dice": 0.8953,
+   "precision": 0.8648,
+   "recall": 0.928,
+   "pred_px": 15817,
+   "gt_px": 14739
+  }
+ ]
+}

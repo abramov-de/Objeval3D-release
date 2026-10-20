@@ -1,0 +1,124 @@
+{
+  "manifest": "workspace/objeval/manifests/lmo_v3.json",
+  "dataset": "lmo",
+  "git_revision": "00895a3-dirty",
+  "zebrapose_root": "third_party/ZebraPose",
+  "padding_ratio": 1.5,
+  "resize_method": "crop_square_resize",
+  "crop_size_img": 256,
+  "threshold": 0.5,
+  "provenance": {
+    "training_data_folder": "train_pbr",
+    "training_data_folder_2": "none",
+    "matches_cnos_table1_row": "ZebraPose (Synth)"
+  },
+  "objects": {
+    "1": {
+      "obj_name": "ape",
+      "checkpoint": "workspace/ckpt/zebrapose/bop/lmo/ape",
+      "checkpoint_fingerprint": "349672903:1790499559",
+      "best_score": 0.5647668393782384,
+      "iteration_step": 292500,
+      "n_sets": 10,
+      "n_frames": 30,
+      "n_empty_masks": 0,
+      "n_degenerate_bbox": 0,
+      "seconds": 0.5
+    },
+    "5": {
+      "obj_name": "can",
+      "checkpoint": "workspace/ckpt/zebrapose/bop/lmo/can",
+      "checkpoint_fingerprint": "349672839:1790499575",
+      "best_score": 0.9569179784589892,
+      "iteration_step": 375500,
+      "n_sets": 10,
+      "n_frames": 30,
+      "n_empty_masks": 0,
+      "n_degenerate_bbox": 0,
+      "seconds": 0.5
+    },
+    "6": {
+      "obj_name": "cat",
+      "checkpoint": "workspace/ckpt/zebrapose/bop/lmo/cat",
+      "checkpoint_fingerprint": "349672839:1790499565",
+      "best_score": 0.5680628272251309,
+      "iteration_step": 268000,
+      "n_sets": 10,
+      "n_frames": 30,
+      "n_empty_masks": 0,
+      "n_degenerate_bbox": 0,
+      "seconds": 0.5
+    },
+    "8": {
+      "obj_name": "driller",
+      "checkpoint": "workspace/ckpt/zebrapose/bop/lmo/driller",
+      "checkpoint_fingerprint": "349672839:1790499568",
+      "best_score": 0.9406919275123559,
+      "iteration_step": 366500,
+      "n_sets": 10,
+      "n_frames": 30,
+      "n_empty_masks": 0,
+      "n_degenerate_bbox": 0,
+      "seconds": 0.5
+    },
+    "9": {
+      "obj_name": "duck",
+      "checkpoint": "workspace/ckpt/zebrapose/bop/lmo/duck",
+      "checkpoint_fingerprint": "349672839:1790499566",
+      "best_score": 0.60595130748422,
+      "iteration_step": 284000,
+      "n_sets": 10,
+      "n_frames": 30,
+      "n_empty_masks": 0,
+      "n_degenerate_bbox": 0,
+      "seconds": 0.5
+    },
+    "10": {
+      "obj_name": "eggbox",
+      "checkpoint": "workspace/ckpt/zebrapose/bop/lmo/eggbox",
+      "checkpoint_fingerprint": "349672903:1790499565",
+      "best_score": 0.6499560246262093,
+      "iteration_step": 279000,
+      "n_sets": 10,
+      "n_frames": 30,
+      "n_empty_masks": 0,
+      "n_degenerate_bbox": 0,
+      "seconds": 0.5
+    },
+    "11": {
+      "obj_name": "glue",
+      "checkpoint": "workspace/ckpt/zebrapose/bop/lmo/glue",
+      "checkpoint_fingerprint": "349672839:1790499569",
+      "best_score": 0.8611435239206534,
+      "iteration_step": 164000,
+      "n_sets": 10,
+      "n_frames": 30,
+      "n_empty_masks": 0,
+      "n_degenerate_bbox": 0,
+      "seconds": 0.5
+    },
+    "12": {
+      "obj_name": "holepuncher",
+      "checkpoint": "workspace/ckpt/zebrapose/bop/lmo/holepuncher",
+      "checkpoint_fingerprint": "349672839:1790499574",
+      "best_score": 0.8049586776859504,
+      "iteration_step": 216500,
+      "n_sets": 10,
+      "n_frames": 30,
+      "n_empty_masks": 0,
+      "n_degenerate_bbox": 0,
+      "seconds": 0.5
+    }
+  },
+  "cost": {
+    "forward_ms_per_frame": {
+      "median": 7.6,
+      "mean": 7.7
+    },
+    "n_timed_frames": 240,
+    "warmup_passes_per_network": 3,
+    "covers": "crop + resize + forward + threshold + paste-back, one object per frame, given a box; excludes image decoding, network loading and any detector",
+    "device": "cuda",
+    "gpu": "NVIDIA GeForce RTX 5090"
+  }
+}

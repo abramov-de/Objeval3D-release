@@ -1,0 +1,22 @@
+{
+ "_note": "Text prompts given to SAM 3, one per object (the final ones of the paper, Table F.1). An object that is not listed is prompted with its BOP name, underscores replaced by spaces.",
+ "overrides": {
+  "master_chef_can": "blue coffee can",
+  "potted_meat_can": "small blue and yellow tinned meat can",
+  "pitcher_base": "large blue plastic pitcher",
+  "extra_large_clamp": "large black clamp",
+  "large_clamp": "black clamp",
+  "power_drill": "cordless power drill",
+  "tuna_fish_can": "small flat tuna can",
+  "wood_block": "wooden block",
+  "foam_brick": "red foam brick",
+  "holepuncher": "blue hole punch",
+  "eggbox": "egg box",
+  "glue": "glue bottle",
+  "ape": "small toy ape figurine",
+  "cat": "small toy cat figurine",
+  "duck": "small yellow toy duck",
+  "driller": "cordless power drill",
+  "can": "metal can"
+ }
+}
