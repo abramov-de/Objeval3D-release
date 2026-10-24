@@ -16,17 +16,9 @@ complete its reconstruction is, against a ground-truth scan.
   [Hugging Face](https://huggingface.co/abramov-de/objeval3d-heads).
 * **The result files** of every experiment, and the code that turns them into the tables and figures of the paper.
 
-```
- images of one static scene (2–6 views)           scan of the object  +  its pose in the scene (the independent anchor)
-          │                                                   │
-          ▼                                                   │
- feed-forward model (DA3, VGGT, your own) ─► depth, confidence, cameras
-          │                                                   │
-  1 segment  mask of the object in every view   (head, ground truth, SAM 3, CNOS, ZebraPose, your own)
-  2 clean    masked depth → point cloud, dropping the 40 % least confident points
-  3 align    cloud → frame of the scan: the anchor fixes six of the seven parameters, only the depth scale is searched
-  4 score    accuracy, completeness, F-score against the (visible part of the) scan
-```
+<p align="center">
+  <img src="docs/pipeline.png" alt="The four stages of the protocol: segment, clean, align, score" width="900">
+</p>
 
 ## The tables of the paper in a minute
 
