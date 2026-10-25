@@ -89,7 +89,9 @@ the protocol of the paper, see the README of the repository.
 
 All heads: 20 epochs, batch size 2, AdamW with learning rate 1e-4 (cosine decay to 1 % of it) and weight decay 1e-4, gradient clipping at
 1.0, images at 504 px on the long side, augmentation on, seed 42; loss is cross-entropy (ignored pixels skipped) plus soft Dice over the foreground classes
-present; the checkpoint is the epoch with the best validation mean IoU. 13–18 minutes per head on one GPU. Only the head is trained.
+present; the checkpoint is the epoch with the best validation mean IoU. Only the head is trained. A head trained on the 675–732 frames of one capture takes
+17–18 minutes on one GPU (the LM-O heads on an NVIDIA GeForce RTX 5090, the YCB-V heads on an NVIDIA RTX PRO 6000 Blackwell); 100 frames take 6 minutes, and the
+cross-scene YCB-V head (1,695 frames, RTX 5090) 43 minutes.
 
 ```bash
 python -m objeval3d.seg.prepare_data --bop-root workspace/data/bop/lmo --dataset lmo --split test --scenes 2 \

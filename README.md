@@ -11,8 +11,9 @@ complete its reconstruction is, against a ground-truth scan.
   model that returns depth and cameras. The alignment takes the position of the object from an *independent anchor* (the ground-truth
   pose) and searches only the depth scale (the **reference mode**), instead of fitting all seven parameters of a similarity transform to
   the cloud (the **free fit**), which absorbs part of the error it is supposed to measure.
-* **A light segmentation head** (our method) on the frozen backbone of Depth Anything 3 (32.65 M parameters, about 18 minutes of training on
-  frames of the capture), which replaces manual annotation of the masks. The weights of the trained heads are on
+* **A light segmentation head** (our method) on the frozen backbone of Depth Anything 3 (32.65 M parameters; about 18 minutes of training on
+  732 frames of LM-O on an NVIDIA GeForce RTX 5090, or on 684 frames of YCB-V on an NVIDIA RTX PRO 6000 Blackwell), which replaces manual
+  annotation of the masks. The weights of the trained heads are on
   [Hugging Face](https://huggingface.co/abramov-de/objeval3d-heads).
 * **The result files** of every experiment, and the code that turns them into the tables and figures of the paper.
 
