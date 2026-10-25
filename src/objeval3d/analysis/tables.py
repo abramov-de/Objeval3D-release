@@ -1,10 +1,10 @@
 """The tables of the paper, by their printed number, and a command that prints them.
 
     python -m objeval3d.analysis.tables                    # every table that is implemented
-    python -m objeval3d.analysis.tables table3 tableG2     # selected ones
+    python -m objeval3d.analysis.tables table3 tableG1     # selected ones
     python -m objeval3d.analysis.tables --results DIR --format json
 
-The numbers are the *printed* numbers of the paper: `table3` is Table 3, `tableA1` Table A.1, `tableG2` Table G.2.
+The numbers are the *printed* numbers of the paper: `table3` is Table 3, `tableA1` Table A.1, `tableG1` Table G.1.
 """
 
 from __future__ import annotations
@@ -22,7 +22,6 @@ from objeval3d.analysis import (
     datasets,
     model_transfer,
     segmenters,
-    understatement,
     views,
 )
 from objeval3d.analysis.common import results_dir
@@ -43,7 +42,6 @@ REGISTRY: dict[str, Callable[[Path], Table]] = {
     "tableA3": views.completeness_visible_vs_full,
     "tableF1": datasets.sam3_prompts,
     "tableG1": benchmark_meshes.meshes_full,
-    "tableG2": understatement.understatement_ladder,
 }
 
 

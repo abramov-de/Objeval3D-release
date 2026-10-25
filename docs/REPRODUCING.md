@@ -26,7 +26,7 @@ The `# env:` comment at a command says which one.
 pip install -e ".[analysis,dev]"
 
 python -m objeval3d.analysis.tables                    # every table, as markdown
-python -m objeval3d.analysis.tables table3 tableG2     # selected ones; the keys are the printed numbers: table3 = Table 3, tableA1 = Table A.1
+python -m objeval3d.analysis.tables table3 tableG1     # selected ones; the keys are the printed numbers: table3 = Table 3, tableA1 = Table A.1
 python -m objeval3d.figures.alignment                  # Figure 5   -> workspace/figures
 python -m objeval3d.figures.rank                       # Figure 6
 pytest                                                 # the tables against the recorded ones, the code on synthetic data
@@ -45,7 +45,8 @@ a test.
 | 4 | `cost/*` (measurements), `lmo_gt_full`, `ycbv_gt` (for the number of objects) |
 | 5 | `lmo_gt_full`, `ycbv_gt` |
 | 6 | `lmo_gt_full_e9`, `ycbv_gt_full_e9` |
-| 7, G.1, G.2 | `burde_main.jsonl.gz`, `burde_controls.json.gz` (G.2 also `lmo_gt_full`, `ycbv_gt`) |
+| 7, G.1 | `burde_main.jsonl.gz` |
+| Appendix G, the check on clouds sampled from the BOP models | `burde_controls.json.gz` |
 | 8, 9 | `lmo_{gt_da3_gt_maskconf,head_maskconf,vggt_gt,vggt_dir}`, `ycbv_{gt_maskconf,head_maskconf,vggt_gt,vggt_dir}` |
 | A.1 | `lmo_head_v2`, `lmo_head_v4`, `lmo_head_v6` |
 | A.2 | `lmo_gt_full`, `lmo_gt_full_v6n`, `ycbv_gt`, `ycbv_gt_v6n` |
@@ -292,7 +293,7 @@ python -m objeval3d.bench.params files workspace/ckpt/lmo_seg_head.pt workspace/
     --json workspace/results/cost/parameter_counts.json
 ```
 
-### 8. The external check on the meshes of Burde et al. (Tables 7, G.1, G.2)
+### 8. The external check on the meshes of Burde et al. (Tables 7 and G.1, and the check of Appendix G)
 
 No reconstruction model and no segmentation: a mesh, a scan and a pose. Data: [DATA.md](DATA.md). Uses the CPU only (hours; `--threads`).
 

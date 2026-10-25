@@ -9,7 +9,7 @@ workspace/                         # $OBJEVAL_WORKSPACE, default ./workspace, ig
     ├── bop/                       # $OBJEVAL_BOP_ROOT, default <workspace>/data/bop
     │   ├── lmo/                   #   LM-O, unzipped BOP archives
     │   └── ycbv/                  #   YCB-V
-    └── burde/                     #   benchmark of Burde et al. (only for Tables 7, G.1 and G.2)
+    └── burde/                     #   benchmark of Burde et al. (only for Tables 7 and G.1 and the check of Appendix G)
 ```
 
 ## BOP datasets: LM-O and YCB-V
@@ -81,7 +81,7 @@ is in the table of [REPRODUCING.md](REPRODUCING.md). Other folders:
 | `results/training/` | the log of every head's training (arguments, loss and validation IoU per epoch) |
 | `results/cost/` | the measurements behind Table 4: DA3 and the head, SAM 3, CNOS, the detector, ZebraPose, the sizes of the weight files |
 | `results/text/` | the small experiments of the paper: the wordings of the SAM 3 prompt and the confidence filter of VGGT |
-| `results/burde_*` | the external check on the meshes of Burde et al. (Tables 7, G.1, G.2) |
+| `results/burde_*` | the external check on the meshes of Burde et al. (Tables 7 and G.1, and the check of Appendix G) |
 | `results/lmo_seg_confusion`, `*_split_*`, `ycbv_seg_confusion` | the confusion matrices of the heads on held-out frames |
 
 The compressed result files are written by Python's `json` and contain its `NaN` literal where a value is undefined (the precision of an empty
@@ -90,7 +90,7 @@ mask, say); `json.load` reads them, a strict JSON parser needs to be told to acc
 The result files keep the identifiers of the code that wrote them (`oracle_raw` for the *reference mode*, `auto` for the *free fit*);
 [GLOSSARY.md](GLOSSARY.md) maps them to the words of the paper.
 
-## Benchmark of Burde et al. (Tables 7, G.1, G.2)
+## Benchmark of Burde et al. (Tables 7 and G.1, and the check of Appendix G)
 
 An external check of the alignment result on meshes reconstructed by other methods (BakedSDF, MonoSDF, Nerfacto, VolSDF) from 3 and from
 all images of the 21 YCB-V objects. Burde, Benbihi, Burget, Sattler, *Comparative Evaluation of 3D Reconstruction Methods for Object Pose

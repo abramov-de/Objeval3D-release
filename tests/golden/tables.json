@@ -587,55 +587,6 @@
      "0.12 → 0.29"
     ]
    ]
-  },
-  "tableG2": {
-   "rows": [
-    [
-     "BOP model copy + independent noise (0.5–2 mm)",
-     "Ground-truth pose recovered; shift <= 0.2% of diameter",
-     "0.99–1.00"
-    ],
-    [
-     "Smoothly bent model (1–3 mm)",
-     "Rotation: 0.6–2.4°; negligible shift",
-     "1.12–1.33"
-    ],
-    [
-     "Burde et al., all-image meshes (n=78)",
-     "Shift: 1.6% of diameter; arbitrary initialization",
-     "1.60"
-    ],
-    [
-     "LM-O, lowest depth-error third",
-     "Converged: 3/27",
-     "1.56"
-    ],
-    [
-     "LM-O, middle depth-error third",
-     "Converged: 1/27",
-     "1.94"
-    ],
-    [
-     "LM-O, highest depth-error third",
-     "Converged: 0/26",
-     "2.63"
-    ],
-    [
-     "YCB-V, lowest depth-error third",
-     "Converged: 21/26",
-     "1.78"
-    ],
-    [
-     "YCB-V, middle depth-error third",
-     "Converged: 10/26",
-     "2.23"
-    ],
-    [
-     "YCB-V, highest depth-error third",
-     "Converged: 5/26",
-     "2.28"
-    ]
-   ]
   }
  }
 }

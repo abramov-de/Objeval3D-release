@@ -30,7 +30,7 @@ git clone https://github.com/abramov-de/Objeval3D-release && cd Objeval3D-releas
 python -m venv .venv && source .venv/bin/activate          # Python 3.10 or newer
 pip install -e ".[analysis,dev]"
 
-python -m objeval3d.analysis.tables table3                 # Table 3 as markdown; the key is the printed number: table5, tableA1, tableG2, …
+python -m objeval3d.analysis.tables table3                 # Table 3 as markdown; the key is the printed number: table5, tableA1, tableG1, …
 python -m objeval3d.analysis.tables                        # all of them
 python -m objeval3d.figures.alignment                      # Figure 5 -> workspace/figures (Figure 6: objeval3d.figures.rank)
 pytest                                                     # the tables against the recorded ones, the code on synthetic data
